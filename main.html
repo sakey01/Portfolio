@@ -1,29 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
 
-    <head> <!-- meta data -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
-        <link rel="stylesheet" href="main.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sheikh Ahmed</title>
+    <link rel="stylesheet" href="main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
 
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul id="nav">
-                    <li><a href="https://www.google.com">About</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Setting</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <h1 id="title">My Portfolio</h1>
-            <h2>About me</h2>
-            <section>Aspiring software engineer and current undergraduate</section>
-        </main>
+<body>
+    <header>
+        <!-- Navigation bar -->
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#" class="nav-links">Home</a></li>
+                <li><a href="#about-me" class="nav-links">About</a></li>
+                <li><a href="#projects" class="nav-links">Projects</a></li>
+                <li><a href="#" class="nav-links">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    </body>
+    <main>
+        <section class="viewport">
+        <!-- Name, title, and quote -->
+            <section class="center-box">
+                <h1 id="my-name">Sheikh Ahmed</h1>
+                <h4 class="my-description">Aspiring Full-Stack Developer</h4>
+                <p id="about">
+                    <q><i>The best error message is the one that never shows up.</i></q> — Thomas Fuchs
+                </p>
+            </section>
+
+            <!-- Two buttons -->
+            <section class="button-list">
+                <button class="mybuttons" id="projects-button" onclick="location.href='#projects'">View Projects</button>
+                <button class="mybuttons" id="contact-me-button" onclick="location.href='#contacts'">Contact Me</button>
+            </section>
+        </section>
+
+        <!-- Scroll down prompt -->
+        <section class="center-box">
+            <a href="#about-me" id="scroll-down" class="scroll-link">Scroll down</a>
+        </section>
+        
+        
+        <!-- About me section -->
+        <section id="about-me" class="center-box alt-background scroll-anchor">
+            <h2 class="sub-headings">About Me</h2>
+            <p class="paragraph-text">Focused on creating Clean and Efficient Code</p>
+            <p class="paragraph-text">
+                I'm a Computer Science undergraduate in my second year, with expertise in Java and Swift. I also have
+                experience with SQL, WordPress, and more.
+            </p>
+        </section>
+
+        <!-- Projects section -->
+        <section id="projects" class="project-list center-box scroll-anchor">
+            <h2 class="sub-headings">Projects</h2>
+            <p>
+                Here are some of the projects I've worked on, showcasing my skills in web development and software
+                engineering.
+            </p>
+            <ul class="paragraph-text">
+                <li><strong>Portfolio Website:</strong> A responsive website built with HTML, CSS, and JavaScript to
+                    showcase my skills and work.</li>
+                <li><strong>Task Manager App:</strong> A Swift-based iOS app for managing daily tasks and reminders.</li>
+                <li><strong>Database Project:</strong> Implemented an SQL database system to manage inventory and customer
+                    data.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Contact info + LinkedIn + more -->
+    <footer>
+        <section id="contacts" class="center-box alt-background scroll-anchor">
+            <h2 class="sub-headings">Contacts</h2>
+            <!-- Add contact info here -->
+        </section>
+    </footer>
+</body>
+
 </html>

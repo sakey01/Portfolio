@@ -1,20 +1,126 @@
-body {
-  background: black;
-  color: white;
-  font-family: 'Roboto', sans-serif;
+html {
+  scroll-behavior: smooth;
 }
-#nav {
-  list-style: none;
+
+body {
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+  color: gainsboro;
+  background: linear-gradient(to left, #5F4B8B, #080029, #1e0048);
+}
+
+
+nav {
+  letter-spacing: 2px;
+  position: fixed;
+  width: 100%;
   display: flex;
-  gap: 30px;
-  justify-content: right;
-  font-size: 20px;
+  justify-content: center;
+  background: linear-gradient(to left, #5F4B8B, #080029, #1e0048);
+  opacity: 90%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(152, 112, 212, 0.3);
   padding: 10px;
 }
-a {
-  text-decoration-line: none;
-  color: white;
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  font-size: 20px;
+  
 }
-a:hover {
-  color: gray;
+
+.nav-links {
+  color: rgb(205, 205, 205);
+  text-decoration: none;
+}
+
+.nav-links:hover {
+  color: rgb(255, 250, 250);
+}
+
+#my-name {
+  font-size: 52px;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.my-description {
+  text-align: center;
+}
+
+#about {
+  margin-top: 4vw;
+  font-size: 20px;
+  color: rgb(180, 180, 180);
+  text-align: center;
+}
+
+.center-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.alt-background {
+  background: linear-gradient(to left, #250c5c, #080029, #321968);
+}
+
+.button-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.mybuttons {
+  display: inline-flex;
+  background-color: gainsboro;
+  color: black;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.mybuttons:hover {
+  background-color: white;
+}
+
+.scroll-link {
+  display: flex;
+  justify-content: center;
+  color: rgb(180, 180, 180);
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.sub-headings {
+  font-size: 42px;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.paragraph-text {
+  font-size: 20px;
+  color: rgb(180, 180, 180);
+}
+
+.viewport {
+  height: 100vh;
+  position: relative;
+  top: 30vh;
+}
+
+#scroll-down {
+  position: absolute;
+  top: 90vh;
+}
+
+.scroll-anchor {
+  scroll-margin-top: 80px;
 }
