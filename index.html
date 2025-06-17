@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sheikh Ahmed</title>
-    <link rel="stylesheet" href="main.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <title>Sheikh Ahmed</title> <!--Webpage name-->
+    <link rel="stylesheet" href="main.css" /> <!--CSS file-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  <!--Google icons-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />  <!--Roboto font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Font awesome icons-->
 </head>
 
 <body>
@@ -34,8 +36,8 @@
 
             <!-- Two buttons -->
             <section class="button-list">
-                <button class="mybuttons" id="projects-button" onclick="location.href='#projects'">View Projects</button>
-                <button class="mybuttons" id="contact-me-button" onclick="location.href='#contacts'">Contact Me</button>
+                <button class="mybuttons" id="projects-button" onclick="location.href='#projects'">View Projects<span><i class="material-icons">arrow_forward</i></span></button>
+                <button class="mybuttons" id="contact-me-button" onclick="location.href='#contacts'">Contact Me<span><i class="material-icons">person</i></button>
             </section>
         </section>
 
@@ -46,19 +48,27 @@
         
         
         <!-- About me section -->
-        <section id="about-me" class="center-box alt-background scroll-anchor">
+        <section id="about-me" class="alt-background scroll-anchor">
             <h2 class="sub-headings">About Me</h2>
             <p class="paragraph-text">Focused on creating Clean and Efficient Code</p>
             <p class="paragraph-text">
-                I'm a Computer Science undergraduate in my second year, with expertise in Java and Swift. I also have
-                experience with SQL, WordPress, and more.
+                I’m a second-year Computer Science undergraduate with expertise in Java and Swift. I’ve also worked with SQL, WordPress, and other tools. 
+                I’m aiming to grow as a full-stack developer and build things that genuinely make an impact.
             </p>
+            <p class="paragraph-text">
+                When I’m not coding, I like exploring new tech, keeping up with industry trends, and working on personal projects. 
+                But honestly — I’m probably just binging the latest show on Netflix.
+            </p>
+            <a href="" id="mail-icon"><i class="fa-light fa-envelope"></i></a>
+            <a href="https://github.com/sakey01" id="github-icon"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/feed/" id="linkedin-icon"><i class="fa fa-linkedin-square"></i></a>
+         
         </section>
 
         <!-- Projects section -->
-        <section id="projects" class="project-list center-box scroll-anchor">
+        <section id="projects" class="project-list scroll-anchor">
             <h2 class="sub-headings">Projects</h2>
-            <p>
+            <p class="paragraph-text">
                 Here are some of the projects I've worked on, showcasing my skills in web development and software
                 engineering.
             </p>
@@ -76,7 +86,6 @@
     <footer>
         <section id="contacts" class="center-box alt-background scroll-anchor">
             <h2 class="sub-headings">Contacts</h2>
-            <!-- Add contact info here -->
         </section>
     </footer>
 </body>
