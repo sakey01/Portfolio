@@ -2,8 +2,9 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sheikh Ahmed</title> <!--Webpage name-->
+    <meta name="description" content="Sheikh's Portfolio with projects">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="main.css" /> <!--CSS file-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  <!--Google icons-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />  <!--Roboto font-->
@@ -27,20 +28,21 @@
         <section class="viewport">
         <!-- Name, title, and quote -->
             <section class="center-box">
+                <!--Full Name-->
                 <h1 id="my-name">Sheikh Ahmed</h1>
-                <h4 class="my-description">Aspiring Full-Stack Developer</h4>
+                <!--Profession-->
+                <h4 class="description">Aspiring Full-Stack Developer</h4>
                 <p id="about">
+                    <!--Quote-->
                     <q><i>The best error message is the one that never shows up.</i></q> — Thomas Fuchs
                 </p>
             </section>
-
             <!-- Two buttons -->
             <section class="button-list">
                 <button class="mybuttons" id="projects-button" onclick="location.href='#projects'">View Projects<span><i class="material-icons">arrow_forward</i></span></button>
                 <button class="mybuttons" id="contact-me-button" onclick="location.href='#contacts'">Contact Me<span><i class="material-icons">person</i></button>
             </section>
         </section>
-
         <!-- Scroll down prompt -->
         <section class="center-box">
             <a href="#about-me" id="scroll-down" class="scroll-link">Scroll down</a>
@@ -48,25 +50,35 @@
         
         
         <!-- About me section -->
-        <section id="about-me" class="alt-background scroll-anchor">
-            <h2 class="sub-headings">About Me</h2>
-            <p class="paragraph-text">Focused on creating Clean and Efficient Code</p>
-            <p class="paragraph-text">
-                I’m a second-year Computer Science undergraduate with expertise in Java and Swift. I’ve also worked with SQL, WordPress, and other tools. 
-                I’m aiming to grow as a full-stack developer and build things that genuinely make an impact.
-            </p>
-            <p class="paragraph-text">
-                When I’m not coding, I like exploring new tech, keeping up with industry trends, and working on personal projects. 
-                But honestly — I’m probably just binging the latest show on Netflix.
-            </p>
-            <a href="" id="mail-icon"><i class="fa-light fa-envelope"></i></a>
-            <a href="https://github.com/sakey01" id="github-icon"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/feed/" id="linkedin-icon"><i class="fa fa-linkedin-square"></i></a>
-         
+        <section id="about-me" class="alt-background scroll-anchor page-section">
+            <div class="left-block">
+                <h2 class="sub-headings">About Me</h2>
+                <p class="paragraph-text description">Focused on creating Clean and Efficient Code</p>
+                <!--Who I am-->
+                <p class="paragraph-text">
+                    I’m a second-year Computer Science undergraduate with expertise in Java and Swift. I’ve also worked with SQL, WordPress, and other tools. 
+                    I’m aiming to grow as a full-stack developer and build things that genuinely make an impact.
+                </p>
+                <!--Hobbies and Interests-->
+                <p class="paragraph-text">
+                    When I’m not coding, I like exploring new tech, keeping up with industry trends, and working on personal projects. 
+                    But honestly — I’m probably just binging the latest show on Netflix.
+                </p>
+            </div>
+            <!--Socials-->
+            <ul class="icons-list right-block">
+                <li><a href="https://github.com/sakey01" id="github-icon" class="icons-display"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/feed/" id="linkedin-icon" class="icons-display"><i class="fa fa-linkedin-square"></i></a></li>
+                <li><a href="" id="mail-icon" class="icons-display"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+            <div>
+                <img src="codinggif.gif" alt="coding cat">
+            </div>
         </section>
 
+
         <!-- Projects section -->
-        <section id="projects" class="project-list scroll-anchor">
+        <section id="projects" class="scroll-anchor page-section">
             <h2 class="sub-headings">Projects</h2>
             <p class="paragraph-text">
                 Here are some of the projects I've worked on, showcasing my skills in web development and software
@@ -82,10 +94,29 @@
         </section>
     </main>
 
-    <!-- Contact info + LinkedIn + more -->
+
+    <!-- Contact info + more -->
     <footer>
-        <section id="contacts" class="center-box alt-background scroll-anchor">
+        <section id="contacts" class="alt-background scroll-anchor page-section">
             <h2 class="sub-headings">Contacts</h2>
+            <p class="description">Let's work together</p>
+            <h3>Get in Touch</h3>
+            <p class="paragraph-text">If you have a project in mind and want someone to help, I'm more than happy to look in
+                to it. Feel free to shoot me a email
+            </p>
+            <!--Socials-->
+            <ul class="icons-list">
+                <li><a href="https://github.com/sakey01" id="github-icon" class="icons-display"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/feed/" id="linkedin-icon" class="icons-display"><i class="fa fa-linkedin-square"></i></a></li>
+                <li><a href="" id="mail-icon" class="icons-display"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+            <!--Input field-->
+            <form action="/submit" method="POST">
+                <input type="text" name="fname" placeholder="Your Name" id="input-name" class="input-box" required>
+                <input type="email" name="email" placeholder="Your Email" id="input-email" class="input-box" required>
+                <input type="text" name="message" placeholder="Your Message" id="input-message" class="input-box" required>
+                <button id="submit-form-button" class="">Send Message<span><i id="paper-plane" class="fa fa-paper-plane"></i></span></i></button>
+            </form> 
         </section>
     </footer>
 </body>
