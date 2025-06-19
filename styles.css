@@ -14,15 +14,14 @@ nav {
   position: fixed;
   width: 100%;
   display: flex;
-  justify-content: center;
   background: linear-gradient(to left, #5F4B8B, #080029, #1e0048);
   opacity: 90%;
   z-index: 1000;
   border-bottom: 0.5px solid rgba(43, 9, 94, 0.6);
-  padding: 10px;
 }
 
 .nav-menu {
+  width: 100%;
   list-style: none;
   display: flex;
   justify-content: center;
