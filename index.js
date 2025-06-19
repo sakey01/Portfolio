@@ -5,5 +5,3 @@ function greet(){
 function add(n) {
     return n*n;
 }
-
-console.log(square(3));
