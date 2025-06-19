@@ -1,0 +1,181 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  font-family: 'Inter', sans-serif;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(to left, #5F4B8B, #080029, #1e0048);
+  font-size: 18px;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to left, #5F4B8B, #080029, #1e0048);
+  opacity: 90%;
+  z-index: 1000;
+  border-bottom: 0.5px solid rgba(43, 9, 94, 0.6);
+  padding: 10px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+a {
+  color: rgb(205, 205, 205);
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+.viewport {
+  height: 100vh;
+  position: relative;
+  top: 25vh;
+}
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero-title {
+  font-size: 48px;
+  margin: 100px 0 0 0;
+}
+
+.hero-description {
+  margin-top: 12px;
+  margin-bottom: 40px;
+}
+
+#about-section {
+  margin-top: 4vw;
+  color: rgb(180, 180, 180);
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 30px 10px 30px;
+  border-radius: 40px;
+  font-size: 14px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transform: scaleY(1.1);
+  gap: 10px;
+}  
+
+button:hover {
+  background-color: #d4d4d4;
+  transition: width 2s;
+}
+
+#contact-me-button {
+  background: transparent;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  color: white;
+}
+
+#scroll-down {
+  position: absolute;
+  bottom: 8vh;
+}
+
+.alt-bg {
+  background: linear-gradient(to left, #6a539b, #080029, #6a539b);
+}
+
+.scroll-anchor {
+  scroll-margin-top: 80px;
+}
+
+.page-section {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.left-container, .right-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.section-title {
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+.grey-text {
+  color: rgb(180, 180, 180);
+}
+
+.icons-display {
+  color: white;
+  font-size: 26px;
+  margin-right: 20px;
+}
+.icons-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+img {
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 300px 20px 20px;
+  margin-bottom: 24px;
+  border-radius: 14px;
+  background: none;
+  opacity: 90%;
+  border-color: rgb(200, 200, 200);
+  letter-spacing: 2px;
+}
+
+#submit-btn {
+  padding: 20px 300px 20px 20px;
+  align-items: center;
+  border-radius: 14px;
+  letter-spacing: 0.5px;
+  font-weight: 540;
+}
+
+#message-box {
+  padding: 20px 300px 100px 20px;
+  position: relative;
+}
