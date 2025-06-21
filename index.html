@@ -4,117 +4,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sheikh's Portfolio with projects">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <!--CSS file -->
-    <script src="index.js"></script> <!--JS file-->
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> <!--Inter font-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  <!--Google icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Font awesome icons-->
-    <link rel="stylesheet" href="styles.css"> <!-- optional CSS file -->
 </head>
 
 <body>
     <header>
-
         <nav>
-            <ul class="nav-menu">
-                <li><a href="#" class="nav-group">Home</a></li>
-                <li><a href="#about-details" class="nav-group">About</a></li>
-                <li><a href="#projects-section" class="nav-group">Projects</a></li>
-                <li><a href="#" class="nav-group">Settings</a></li>
+            <ul class="nav-group grey-text">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!--Main-->
-        <section class="viewport center-page">
-            <section class="centered-content">
-            <!--Hero-->
-                <h1 id="hero-title">Sheikh Ahmed</h1>
-                <p class="hero-description">Aspiring Full-Stack Developer</p>
-                <p id="about" class="grey-text">
-                    <q><i >The best error message is the one that never shows up.</i></q> — Thomas Fuchs
-                </p>
-            </section>
-            <section class="button-group">
-            <!-- Button section -->
-                <button onclick="location.href='#projects-section'">View Projects<i class="material-icons">arrow_forward</i></button>
-                <button id="contact-me-button" onclick="location.href='#contacts'">Contact Me<i class="material-icons">person</i></button>
-            </section>
-        </section>
-        <!-- Scroll down prompt -->
-        <section class="centered-content">
-            <a href="#about-details" id="scroll-down">Scroll down</a>
-        </section>
-
-
-        <!-- About section -->
-        <section id="about-section" class="alt-bg scroll-anchor page-section grey-text split-container">
+        <section id="home" class="center-content">
             <div>
-                <h2 class="section-title">About Me</h2>
-                <p class="section-text hero-description  centered-content">Focused on creating Clean and Efficient Code</p>
-                <p class="section-text">
-                    I’m a second-year Computer Science undergraduate with expertise in Java and Swift. I’ve also worked with SQL, WordPress, and other tools. 
-                    I’m aiming to grow as a full-stack developer and build things that genuinely make an impact.
-                </p>
-                <p class="section-text">
-                    When I’m not coding, I like exploring new tech, keeping up with industry trends, and working on personal projects-section. 
-                    But honestly — I’m probably just binging the latest show on Netflix.
-                </p>
-            </div>
-            <div>
-                <div class="">
-                    <span class="skill-box">JavaScript</span>
-                    <span class="skill-box">Java</span>
-                    <span class="skill-box">C++</span>
-                    <span class="skill-box">HTML</span>
-                    <span class="skill-box">CSS</span>
-                    <span class="skill-box">SQL</span>
+                <h1>Sheikh Ahmed</h1>
+                <p>Aspiring Full-Stack Developer</p>
+                <p class="grey-text quotes"><q><i>The best error message is the one that never shows up.</i></q> — <strong>Thomas Fuchs</strong></p>
+                <div class="button-group">
+                    <button onclick="location.href='#projects'">View Projects<i class="material-icons">arrow_forward</i></button>
+                    <button onclick="location.href='contacts'" id="contact-me-button">Contact Me<i class="material-icons">person</i></button>
                 </div>
             </div>
+            <div id="scroll-button" class="center-content grey-text"><a href="#about">Scroll down</a></div>
         </section>
 
+        <section id="about" class="scroll-anchor">
+            <div>
+                <div style="margin-bottom: 10rem;">
+                    <h2 class="center-content ">About Me</h2>
+                    <p class="center-content grey-text">Focused on creating Clean and Efficient Code</p>
+                </div>
+                <div class="columns">
+                    <div>
+                        <h3>Who am I?</h3>
+                        <div class="section-text">
+                            <p class="">
+                            I’m a second-year Computer Science undergraduate with expertise in Java and Swift. I’ve also worked with SQL, WordPress, and other tools. 
+                            I’m aiming to grow as a full-stack developer and build things that genuinely make an impact. </p>
+                        <p class="">
+                            When I’m not coding, I like exploring new tech, keeping up with industry trends, and working on personal projects-section. 
+                            But honestly — I’m probably just binging the latest show on Netflix</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Skills</h3>
+                        <div class="section-text">
+                            <span class="skill-box">C</span>
+                            <span class="skill-box">C++</span>
+                            <span class="skill-box">CSS</span>
+                            <span class="skill-box">HTML</span>
+                            <span class="skill-box">Java</span>
+                            <span class="skill-box">JavaScript</span>
+                            <span class="skill-box">SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
 
-        <!-- Projects section -->
-        <section id="projects-section" class="scroll-anchor page-section">
-            <h2 class="section-title">Projects</h2>
-            <p class="section-text">
-                Here are some of the projects-section I've worked on, showcasing my skills in web development and software
-                engineering.
-            </p>
-            <ul class="section-text grey-text list">
-                <li><strong>Portfolio Website:</strong> A responsive website built with HTML, CSS, and JavaScript to showcase my skills and work.</li>
-                <li><strong>Iqamah</strong> A Swift-based iOS app for daily prayer reminders and location services</li>
-                <li><strong>Gluten Free Destiny</strong> A team based project serving as an e-commerce stores for gluten free products</li>
-            </ul>
+        <section id="projects" class="center-content scroll-anchor">
+
         </section>
     </main>
-
-
+    
     <footer>
-        <!-- Contact section-->
-        <section id="contacts" class="alt-background scroll-anchor page-section alt-bg">
-            <h2 class="section-title">Contacts</h2>
-            <p class="hero-description">Let's work together</p>
-            <p>Get in Touch</p>
-            <p class="section-text">If you have a project in mind and want someone to help, I'm more than happy to look in
-                to it. Feel free to shoot me a email
-            </p>
-            <!--Input field-->
-            <form action="/submit" method="POST">
-                <input type="text" name="fname" placeholder="Your Name" id="input-name" class="form-field" required>
-                <input type="email" name="email" placeholder="Your Email" id="input-email" class="form-field" required>
-                <input type="text" name="message" placeholder="Your Message" id="message-box" class="form-field" required>
-                <button id="submit-btn" class="">Send Message<i id="paper-plane" class="fa fa-paper-plane"></i></i></button>
-            </form>
-            <!--Socials-->
-            <ul class="icons-list">
-                <li><a href="https://github.com/sakey01" id="github-icon" class="icons-display"><i class="fa fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/feed/" id="linkedin-icon" class="icons-display"><i class="fa fa-linkedin-square"></i></a></li>
-                <li><a href="" id="mail-icon" class="icons-display"><i class="fa fa-envelope"></i></a></li>
-            </ul>
+        <section id="contacts">
+
         </section>
-        <div id="copywrite" class="centered-content grey-text alt-bg">© 2025 All rights reserved by Sheikh Ahmed</div>
+        <section id="copywrite">
+            <p></p>
+        </section>
     </footer>
 </body>
 
