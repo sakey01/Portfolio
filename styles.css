@@ -3,16 +3,17 @@ html {
 }
 
 body {
-  margin: 0px;
   font-family: 'Inter', sans-serif;
   color: rgb(255, 255, 255);
   background: linear-gradient(to left, #5F4B8B, #080029, #1e0048);
   font-size: 18px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 nav {
-  position: fixed;
-  width: 100%;
+  position: fixed, relative;
   display: flex;
   background: linear-gradient(to left, #5F4B8B, #080029, #1e0048);
   opacity: 90%;
@@ -21,7 +22,6 @@ nav {
 }
 
 .nav-menu {
-  width: 100%;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -51,19 +51,17 @@ a:hover {
 }
 
 #hero-title {
+  display: flex;
+  text-align: center;
   font-size: 48px;
   margin: 100px 0 0 0;
 }
 
 .hero-description {
+  display: flex;
+  text-align: center;
   margin-top: 12px;
   margin-bottom: 40px;
-}
-
-#about-section {
-  margin-top: 4vw;
-  color: rgb(180, 180, 180);
-  text-align: center;
 }
 
 .button-group {
@@ -113,17 +111,12 @@ button:hover {
 }
 
 .page-section {
-  display: grid;
-  flex-direction: column;
   justify-content: center;
   padding: 20px;
 }
 
-.left-container, .right-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
+.list {
+  list-style: none;
 }
 
 .section-title {
@@ -177,4 +170,16 @@ img {
 #message-box {
   padding: 20px 300px 100px 20px;
   position: relative;
+}
+
+#copywrite {
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+.skill-box {
+  padding: 10px;
+  background-color: grey;
+  gap: 10px;
+  border-radius:12px ;
 }
