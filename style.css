@@ -7,14 +7,16 @@ body {
     color: rgb(255, 255, 255);
     background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
     margin: 0;
-    font-size: 16px;
+    font-size: 0.8rem;
+    font-weight: 400;
 }
 
 nav {
-    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
     z-index: 1;
     margin: 0;
-    opacity: 80%;
     border-bottom: 0.5px solid #0f2027;
     background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
     position: fixed;
@@ -34,23 +36,26 @@ nav {
     gap: 20px;
 }
 
+.opacity-90 {
+    opacity: 90%;
+}
+
 a {
-    color: rgb(190, 190, 190);
+    color: rgb(255, 255, 255);
     text-decoration: none;
+    font-weight: 500;
 }
 
 a:hover {
-    color: white;
+    transform: scaleX(10px);
     opacity: 100%;
     cursor: pointer;
 }
 
 #home {
-    margin-top: 60px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    padding: 40px 20px 80px;
 }
 
 .center-content {
@@ -66,7 +71,8 @@ a:hover {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
     margin: 0;
 }
 
@@ -78,18 +84,27 @@ h1 {
 button {
     display: inline-flex;
     align-items: center;
-    padding: 10px 30px;
-    border-radius: 40px;
-    font-size: 14px;
+    padding: 8px 24px;
+    background-color: white;
+    border-radius: 2rem;
+    border: 1px solid white;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
     cursor: pointer;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
     transform: scaleY(1.1);
     transition: transform 0.4s;
 }
 
 button:hover {
-    background-color: rgb(185, 185, 185);
+    background-color: rgb(200, 200, 200);
+    border-color: rgb(200, 200, 200);
     transform: scaleY(1.15);
+}
+
+.grey-shadow {
+    box-shadow: 0 4px 4px gray;
 }
 
 .button-group {
@@ -111,50 +126,51 @@ button:hover {
 }
 
 @keyframes bounce {
-    from {transform: translateY(8px);}
-    to {transform: translateY(-8px);}
+    from { transform: translateY(8px); }
+    to { transform: translateY(-8px); }
 }
 
 #scroll-button {
     position: relative;
-    top: 30vh;
-    font-size: 18px;
+    top: 120px;
+    font-size: 16px;
     animation: bounce 1s alternate-reverse linear infinite;
+    background: transparent;
 }
+
 
 .divider {
     margin-bottom: 6rem;
 }
 
 .scroll-anchor {
-  scroll-margin-top: 80px;
+    scroll-margin-top: 80px;
 }
 
 #about {
-    padding: 20px;
+    padding: 30px;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
+    font-weight: 600;
     margin-bottom: 0;
 }
 
 .columns {
     display: grid;
     grid-template-columns: 50% 1fr;
-    gap: 5rem;
+    gap: 2rem;
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .section-text {
-    font-size: 1.2rem;
-}
-
-#skills {
-    
+    font-size: 1.05rem;
+    font-weight: 400;
 }
 
 .skills-list {
@@ -166,53 +182,53 @@ h3 {
 
 .translucent-bg {
     display: inline-block;
-    color: rgb(237, 237, 237);
-    background-color: rgba(111, 119, 117, 0.6);
-    border-radius: 0.5rem;
-    padding: 0.75rem 1.25rem;
-    margin: 4px;
+    border-radius: 2rem;
+    padding: 0.65rem 1.5rem;
     font-weight: 500;
+    margin: 4px;
+    border: 1px solid rgb(193, 193, 193);
 }
 
 @media (max-width: 768px) {
     body, .button {
-    font-size: 0.8rem;
+        font-size: 0.75rem;
     }
-    nav, h3 {
-    font-size: 1rem;
 
+    nav, h3 {
+        font-size: 0.9rem;
     }
-    h1  {
-    font-size: 2rem;
+
+    h1 {
+        font-size: 1.8rem;
     }
 
     h2 {
-    font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     button {
-    padding: 5px 15px;
+        padding: 4px 12px;
+        font-size: 12px;
     }
 
     .section-text, #scroll-button {
-    font-size: 0.875rem;
+        font-size: 0.8rem;
     }
 
     #scroll-button {
         top: 20vh;
     }
 
-
     .divider {
-    margin-bottom: 2rem;
+        margin-bottom: 2rem;
     }
 
     .columns {
-    gap: 1rem;
+        gap: 1rem;
     }
 
     .non-columns {
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
     }
 }
