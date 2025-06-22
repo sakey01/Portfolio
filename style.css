@@ -187,7 +187,7 @@ h3 {
     font-weight: 500;
     margin: 4px;
     background: linear-gradient(180deg, #203a43, #2c5364);
-    box-shadow: 0 2px 4px rgb(255, 255, 255);
+    box-shadow: 0 2px 4px #2c5364
 }
 
 
