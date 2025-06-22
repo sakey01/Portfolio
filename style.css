@@ -46,6 +46,7 @@ a:hover {
 }
 
 #home {
+    margin-top: 60px;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -116,7 +117,7 @@ button:hover {
 
 #scroll-button {
     position: relative;
-    top: 35vh;
+    top: 30vh;
     font-size: 18px;
     animation: bounce 1s alternate-reverse linear infinite;
 }
@@ -152,42 +153,32 @@ h3 {
     font-size: 1.2rem;
 }
 
-
-.skills-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 0;
-  margin: 0;
-  justify-content: center;
-  max-width: 100%;
-  box-sizing: border-box;
+#skills {
+    
 }
 
-.skill-box {
-  padding: 8px 16px;
-  margin: 0;
-  box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  color: white;
-  font-size: 1rem;
-  white-space: nowrap;
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
 }
 
 .translucent-bg {
-    background-color: rgba(105, 128, 128, 0.6);;
-    border-radius: 10px;
-    padding: 15px 20px;
-    margin: 1px;
+    display: inline-block;
+    color: rgb(237, 237, 237);
+    background-color: rgba(111, 119, 117, 0.6);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    margin: 4px;
+    font-weight: 500;
 }
 
 @media (max-width: 768px) {
     body, .button {
-    font-size: 0.815rem;
+    font-size: 0.8rem;
     }
-    nav {
+    nav, h3 {
     font-size: 1rem;
 
     }
@@ -199,10 +190,6 @@ h3 {
     font-size: 1.4rem;
     }
 
-    h3 {
-    font-size: 1rem;
-    }
-
     button {
     padding: 5px 15px;
     }
@@ -210,6 +197,11 @@ h3 {
     .section-text, #scroll-button {
     font-size: 0.875rem;
     }
+
+    #scroll-button {
+        top: 20vh;
+    }
+
 
     .divider {
     margin-bottom: 2rem;
