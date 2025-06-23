@@ -4,51 +4,37 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    color: rgb(255, 255, 255);
+    color: whitesmoke;
     background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
-    margin: 0;
-    font-size: 1.1rem;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 nav {
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 500;
     z-index: 1;
-    margin: 0;
     border-bottom: 0.5px solid #0f2027;
     background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
     position: fixed;
     width: 100%;
-    top: 0;
 }
 
 .nav-group {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     list-style: none;
-    margin: 0;
-    padding: 20px;
+    padding: 1rem;
     gap: 20px;
-}
-
-.opacity-90 {
-    opacity: 90%;
 }
 
 a {
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font-weight: 500;
 }
 
 a:hover {
     color: #4698bc;
-    transform: scaleX(10px);
     opacity: 100%;
     cursor: pointer;
 }
@@ -72,7 +58,7 @@ a:hover {
 }
 
 h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 700;
     margin: 0;
 }
@@ -86,14 +72,10 @@ button {
     display: inline-flex;
     align-items: center;
     padding: 12px 32px;
-    background-color: white;
     border-radius: 2rem;
     border: 1px solid white;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: 'Inter', sans-serif;
     cursor: pointer;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.1rem;
     transform: scaleY(1.1);
     transition: transform 0.4s;
 }
@@ -101,29 +83,28 @@ button {
 button:hover {
     background-color: rgb(200, 200, 200);
     border-color: rgb(200, 200, 200);
-    transform: scaleY(1.15);
-}
-
-.grey-shadow {
-    box-shadow: 0 4px 4px gray;
+    transform: scaleY(1.2);
 }
 
 .button-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
     justify-content: center;
-}
-
-.material-icons {
-    margin-left: 10px;
-    align-items: center;
 }
 
 #contact-me-button {
     background: transparent;
     border: 1px solid white;
     color: white;
+}
+
+.material-icons {
+    margin-left: 0.5rem;
+}
+
+.grey-shadow {
+    box-shadow: 0 4px 4px gray;
 }
 
 @keyframes bounce {
@@ -133,25 +114,33 @@ button:hover {
 
 #scroll-button {
     position: relative;
-    top: 30vh;
+    top: 20vh;
     animation: bounce 1s alternate-reverse linear infinite;
     background: transparent;
 }
 
-.divider {
-    margin-bottom: 6rem;
+.spacer {
+    margin-bottom: 1rem;
+}
+
+.spacer-2x {
+    margin-bottom: 2rem;
+}
+
+.spacer-4x {
+    margin-bottom: 4rem;
 }
 
 .scroll-anchor {
-    scroll-margin-top: 80px;
+    scroll-margin-top: 60px;
 }
 
 #about {
-    padding: 10rem 15rem;
+    padding: 6rem 8rem;
 }
 
 h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 0;
 }
@@ -163,13 +152,18 @@ h2 {
 }
 
 h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 600;
 }
 
 .section-text {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 .skills-list {
@@ -177,7 +171,6 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     font-size: 1rem;
-    margin: 1rem;
 }
 
 .translucent-bg {
@@ -186,50 +179,59 @@ h3 {
     padding: 0.5rem 1.5rem;
     font-weight: 500;
     margin: 4px;
-    background: linear-gradient(180deg, #203a43, #2c5364);
-    box-shadow: 0 2px 4px #2c5364
+    box-shadow: 0 2px 4px #ffffff
 }
 
-
-@media (max-width: 1400px) {
-    #about {
-        padding: 5rem;
-    }
-
+#projects {
+    padding: 4rem;
 }
+
+.project-card {
+    display: flex;
+    border-radius: 1.5rem;
+    background-color: white;
+    color:#0f2027;
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    height: auto;
+}
+
+#copywrite {
+    font-size: 0.75rem;
+    padding: 1rem;
+    opacity: 60%;
+    border-top: 1px solid #203a43;
+}
+
 @media (max-width: 768px) {
-    body, .button {
-        font-size: 1rem;
+    body, .section-text, #scroll-button {
+        font-size: 0.875rem;
     }
 
     nav, h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     h1 {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
 
     h2 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     button {
-        padding: 8px 20px;
-        font-size: 14px;
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
     }
-
-    .section-text, #scroll-button {
-        font-size: 1.1rem;
-    }
-
+    
     #scroll-button {
-        top: 20vh;
+        top: 15vh;
     }
 
-    .divider {
-        margin-bottom: 2rem;
-    }
 
     .columns {
         gap: 1rem;
@@ -242,48 +244,5 @@ h3 {
 
     #about {
         padding: 1rem;
-    }
-}
-
-@media (max-height: 800px) {
-    body, .button {
-        font-size: 0.9rem;
-    }
-
-    nav, h3 {
-        font-size: 1.1rem;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.3rem;
-    }
-
-    button {
-        padding: 6px 16px;
-        font-size: 13px;
-    }
-
-    .section-text, #scroll-button {
-        font-size: 1rem;
-    }
-
-    #scroll-button {
-        top: 20vh;
-    }
-
-    .divider {
-        margin-bottom: 1.5rem;
-    }
-
-    .columns {
-        gap: 0.75rem;
-    }
-
-    .non-columns {
-        flex-direction: column;
     }
 }
