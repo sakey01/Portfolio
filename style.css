@@ -28,13 +28,21 @@ nav {
     gap: 20px;
 }
 
+.nav-item:hover {
+    color: #4698bc;
+}
+
+.nav-item:checked {
+    text-decoration: underline;
+}
+
 a {
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
 a:hover {
-    color: #4698bc;
+    color: #bbbbbb;
     opacity: 100%;
     cursor: pointer;
 }
@@ -58,7 +66,7 @@ a:hover {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-weight: 700;
     margin: 0;
 }
@@ -99,7 +107,7 @@ button:hover {
     color: white;
 }
 
-.material-icons {
+.material-icons, .general-icons {
     margin-left: 0.5rem;
 }
 
@@ -140,7 +148,7 @@ button:hover {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 600;
     margin-bottom: 0;
 }
@@ -152,7 +160,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -199,11 +207,41 @@ img {
     height: auto;
 }
 
+
+#contacts {
+    padding: 4rem;
+    background-color: #0f2027;
+
+}
+
+.icons-list {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    font-size: 1.25rem;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+input {
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 1px solid rgb(150, 150, 150);
+}
+
+input:active {
+    border-color: white;
+}
+
 #copywrite {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     padding: 1rem;
-    opacity: 60%;
-    border-top: 1px solid #203a43;
+    opacity: 80%;
+    background-color: #0f2027;
 }
 
 @media (max-width: 768px) {
@@ -244,5 +282,10 @@ img {
 
     #about {
         padding: 1rem;
+    }
+
+    .form {
+        display: grid;
+        grid-template-rows: auto;
     }
 }
