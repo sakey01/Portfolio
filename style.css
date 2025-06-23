@@ -101,13 +101,13 @@ button:hover {
     justify-content: center;
 }
 
-#contact-me-button {
+.hollow-button {
     background: transparent;
     border: 1px solid white;
     color: white;
 }
 
-.material-icons, .general-icons {
+.material-icons, .right-margin {
     margin-left: 0.5rem;
 }
 
@@ -217,24 +217,38 @@ img {
 .icons-list {
     display: flex;
     list-style: none;
-    gap: 1rem;
-    font-size: 1.25rem;
+    gap: 1.25rem;
+    font-size: 1.4rem;
+}
+
+@keyframes enlarge {
+    from {font-size: 1rem; }
+    to {font-size: 1.25rem; }
+}
+
+.icons-list:hover {
+    animation: enlarge 0.2s linear;
 }
 
 form {
     display: grid;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 input {
     border-radius: 0.5rem;
-    padding: 1rem 2rem;
+    padding: 1rem 4rem;
     background: transparent;
     border: 1px solid rgb(150, 150, 150);
 }
 
 input:active {
     border-color: white;
+    border-width: 2px;
+}
+
+#submit-btn {
+
 }
 
 #copywrite {
