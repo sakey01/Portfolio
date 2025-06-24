@@ -37,7 +37,7 @@ nav {
     list-style: none;
 }
 
-.nav-item:hover {
+.nav-item:hover, .nav-item:focus {
     color: #4698bc;
 }
 
@@ -124,10 +124,6 @@ button:hover {
     to { transform: translateY(-8px); }
 }
 
-#about {
-    padding: 10rem 6rem;
-}
-
 h2 {
     font-size: 1.6rem;
     font-weight: 600;
@@ -142,6 +138,7 @@ h2 {
 .gap { gap: 1rem; }
 .gap-2x { gap: 2rem; }
 .gap-3x { gap: 3rem; }
+.gap-4x { gap: 4rem; }
 
 .spacer { margin-bottom: 1rem; }
 .spacer-2x { margin-bottom: 2rem; }
@@ -173,7 +170,7 @@ h3 {
 }
 
 #projects {
-    padding: 8em 1rem;
+    padding: 8em 2rem;
 }
 
 .project-card {
@@ -208,8 +205,8 @@ img:hover {
     transform: scale(1.05);
 }
 
-#contacts {
-    padding: 6rem 1rem;
+#about, #contacts {
+    padding: 6rem 24rem;
 }
 
 .icons-list {
@@ -271,6 +268,13 @@ input:active {
 .dark-bg {
     background-color: #0f2027;
     color: white;
+}
+
+@media (max-width: 1440px) {
+
+    #about, #contacts {
+        padding: 6rem 8rem;
+    }
 }
 
 @media (max-width: 768px) {
