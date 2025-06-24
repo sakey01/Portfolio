@@ -325,7 +325,7 @@ input:active {
         flex-direction: column;
     }
 
-    #about, #contacts {
+    #about, #education, #contacts {
         padding: 5rem 1rem;
     }
 }
@@ -351,7 +351,7 @@ input:active {
         font-size: 1rem;
     }
 
-    #about, #contacts {
+    #about, #education, #contacts {
         padding: 2rem 1rem;
     }
 
