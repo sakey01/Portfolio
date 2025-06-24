@@ -13,7 +13,7 @@
 <body>
     <header>
         <nav class="center-content">
-            <ul class="nav-group grey-text">
+            <ul class="nav-group grey-text gap-2x">
                 <li><a href="#" class="nav-item">Home</a></li>
                 <li><a href="#about" class="nav-item">About</a></li>
                 <li><a href="#projects" class="nav-item">Projects</a></li>
@@ -27,7 +27,7 @@
                 <h1 class="spacer">Sheikh Ahmed</h1>
                 <p>Aspiring Full-Stack Developer</p>
                 <p class="grey-text quotes"><q><i>The best error message is the one that never shows up.</i></q> — <strong>Thomas Fuchs</strong></p>
-                <div class="button-group">
+                <div class="button-group gap-2x">
                     <button onclick="location.href='#projects'" class="grey-shadow">View Projects<i class="material-icons">arrow_forward</i></button>
                     <button onclick="location.href='#contacts'" class="hollow-button grey-shadow">Contact Me<i class="material-icons">person</i></button>
                 </div>
@@ -41,7 +41,7 @@
                     <h2 class="center-content spacer">About Me</h2>
                     <p class="center-content grey-text">Focused on creating Clean and Efficient Code</p>
                 </div>
-                <div class="columns non-columns">
+                <div class="column non-column gap-2x">
                     <div>
                         <h3 class="spacer-2x">Who am I?</h3>
                         <div class="section-text grey-text">
@@ -78,7 +78,7 @@
                 <h2 class="spacer">Projects</h2>
                 <p class="center-content grey-text">Focused on creating Clean and Efficient Code</p>
             </div>
-            <div class="columns">
+            <div class="column non-column gap">
                 <article class="project-card">
                     <figure>
                         <img src="./img/gfd.png" alt="Gluten Free Destiny" width="400" height="800">
@@ -101,26 +101,26 @@
                 <h2 class="spacer">Contacts</h2>
                 <p class="center-content grey-text">Let's work together</p>
             </div>
-            <div class="columns">
+            <div class="column non-column gap-2x">
                 <div>
                     <div>
                         <h3 class="spacer-2x">Get in Touch</h3>
                         <p class="grey-text spacer-2x">I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to drop me a message!</p>
                     </div>
                     <div>
-                        <ul class="icons-list">
-                            <li><a href="https://github.com/sakey01" id="github-icon" class="icons-display"><i class="fa fa-github"></i></a></li>
-                            <li><a href="" id="mail-icon" class="icons-display"><i class="fa fa-envelope"></i></a></li>
-                            <li><a href="https://www.linkedin.com/feed/" id="linkedin-icon" class="icons-display"><i class="fa fa-linkedin-square"></i></a></li>
+                        <ul class="icons-list spacer-2x gap">
+                            <li><a href="https://github.com/sakey01" id="github-icon" class="icon-item"><i class="fa fa-github"></i></a></li>
+                            <li><a href="" id="mail-icon" class="icon-item"><i class="fa fa-envelope"></i></a></li>
+                            <li><a href="https://www.linkedin.com/feed/" id="linkedin-icon" class="icon-item"><i class="fa fa-linkedin-square"></i></a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="center-content">
-                    <form action="/submit" method="POST">
+                <div>
+                    <form action="/submit" method="POST" class="gap">
                         <input type="text" name="fname" placeholder="Your Name" id="input-name" class="form-field" required="">
                         <input type="email" name="email" placeholder="Your Email" id="input-email" class="form-field" required="">
                         <input type="text" name="message" placeholder="Your Message" id="message-box" class="form-field" required="">
-                        <button id="submit-btn" class="hollow-button center-content"><span class="right-margin">Send Message</span><i id="paper-plane" class="fa fa-paper-plane"></i></button>
+                        <button id="submit-btn" class="grey-shadow center-content inline gap"><span class="right-margin">Send Message</span><i id="paper-plane" class="fa fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>

@@ -25,7 +25,6 @@ nav {
     flex-direction: row;
     list-style: none;
     padding: 1rem;
-    gap: 20px;
 }
 
 .nav-item:hover {
@@ -84,20 +83,19 @@ button {
     border: 1px solid white;
     cursor: pointer;
     letter-spacing: 0.1rem;
-    transform: scaleY(1.1);
+    transform: scaleY(1.02);
     transition: transform 0.4s;
 }
 
 button:hover {
     background-color: rgb(200, 200, 200);
     border-color: rgb(200, 200, 200);
-    transform: scaleY(1.2);
+    transform: scale(1.04);
 }
 
 .button-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
 }
 
@@ -153,10 +151,17 @@ h2 {
     margin-bottom: 0;
 }
 
-.columns {
+.column {
     display: grid;
     grid-template-columns: 50% 1fr;
-    gap: 5rem;
+}
+
+.gap {
+    gap: 1rem;
+}
+
+.gap-2x {
+    gap: 2rem;
 }
 
 h3 {
@@ -209,62 +214,74 @@ img {
 
 
 #contacts {
-    padding: 4rem;
+    padding: 6rem 1rem;
     background-color: #0f2027;
 
+}
+
+footer {
+    background-color: #0f2027;
 }
 
 .icons-list {
     display: flex;
     list-style: none;
-    gap: 1.25rem;
     font-size: 1.4rem;
 }
 
 @keyframes enlarge {
-    from {font-size: 1rem; }
-    to {font-size: 1.25rem; }
+    from {font-size: 1.25rem; }
+    to {font-size: 1.4rem; }
 }
 
-.icons-list:hover {
-    animation: enlarge 0.2s linear;
+.icon-item {
+    transition: all 0.3s ease;
+}
+
+.icon-item:hover {
+    transform: scale(1.2);
+  
+}
+
+.inline {
+    display: flex;
+    flex-direction: row;
 }
 
 form {
     display: grid;
-    gap: 1.25rem;
 }
 
 input {
+    padding: 1rem 2rem;
+    width: auto;
     border-radius: 0.5rem;
-    padding: 1rem 4rem;
     background: transparent;
     border: 1px solid rgb(150, 150, 150);
 }
 
 input:active {
     border-color: white;
-    border-width: 2px;
+    border: 2px solid white;
 }
 
 #submit-btn {
-
+    border-radius: 0.5rem;
 }
 
 #copywrite {
     font-size: 0.875rem;
     padding: 1rem;
     opacity: 80%;
-    background-color: #0f2027;
 }
 
 @media (max-width: 768px) {
     body, .section-text, #scroll-button {
-        font-size: 0.875rem;
+        font-size: 1rem;
     }
 
-    nav, h3 {
-        font-size: 1rem;
+    h3 {
+        font-size: 1.2rem;
     }
 
     h1 {
@@ -272,7 +289,7 @@ input:active {
     }
 
     h2 {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 
     button {
@@ -285,21 +302,21 @@ input:active {
     }
 
 
-    .columns {
+    .column {
         gap: 1rem;
     }
 
-    .non-columns {
+    .non-column {
         display: flex;
         flex-direction: column;
     }
 
-    #about {
-        padding: 1rem;
+    #about, #contacts {
+        padding: 5rem 1rem;
     }
 
-    .form {
-        display: grid;
-        grid-template-rows: auto;
+    form {
+        
     }
+
 }
