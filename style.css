@@ -26,9 +26,9 @@ a:hover {
 
 nav {
     z-index: 1;
-    border-bottom: 0.5px solid #0f2027;
     position: fixed;
     width: 100%;
+    box-shadow: 0 1px 2px #0f2027;
 }
 
 .nav-group {
@@ -227,8 +227,12 @@ img:hover {
     transform: scale(1.05);
 }
 
-#about, #education, #contacts {
+#about, #contacts {
     padding: 6rem 24rem;
+}
+
+#education {
+    padding: 6rem 12rem;
 }
 
 .icons-list {
