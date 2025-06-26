@@ -6,9 +6,9 @@
     <meta name="description" content="Sheikh's Portfolio with projects">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> <!--Inter font-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  <!--Google icons-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Font awesome icons-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -121,22 +121,22 @@
                     <p class="center-content grey-text">Academic background</p>
                 </div>
                 <div class="gap-4x">
-                    <div class="">
+                    <div><i id="school-icon" class="material-icons left-margin">school</i></div>
+                    <div class="show">
                         <h3 class="spacer">Bachelors in Computer Science</h3>
                         <p class="spacer">University of West London - London, UK</p>
                         <span class="inline spacer"><i class="material-icons">calendar_month</i><time datetime="2023-10-08" class="left-margin"></i>2023 - Present</time></span>
                     </div>
                     <div class="spacer-2x"><p>Covering a wide range of topics</p></div>
-                    <div class="hidden visible">
                         <h4 class="spacer">Modules</h4>
-                        <div class="column non-column">
+                        <div id="skills-list" class="column non-column">
                             <ul>
                                 <li>Theory of Computation</li>
                                 <li>Data Communications</li>
                                 <li>Computing Group Project</li>
                                 <li>Programming Language Paradigms</li>
                             </ul>
-                            <ul>
+                            <ul >
                                 <li>Advanced Algorithms</li>
                                 <li>Artificial Intelligence</li>
                                 <li>Mobile Web Application Development</li>
@@ -170,21 +170,20 @@
                     </div>
                 </div>
                 <div>
-                    <form action="/submit" method="POST" class="gap">
-                        <input type="text" name="fname" placeholder="Your Name" id="input-name" class="form-field" required="">
-                        <input type="email" name="email" placeholder="Your Email" id="input-email" class="form-field" required="">
-                        <input type="text" name="message" placeholder="Your Message" id="message-box" class="form-field" required="">
+                    <form id="contact-form" action="/submit" method="POST" class="gap">
+                        <input id="input-name" type="text" name="fname" placeholder="Your Name" class="form-field" required="">
+                        <input id="input-email" type="email" name="email" placeholder="Your Email" class="form-field" required="">
+                        <input id="msg-box" type="text" name="message" placeholder="Your Message" class="form-field" required="">
                         <button id="submit-btn" class="grey-shadow center-content inline gap"><span class="left-margin">Send Message</span><i id="paper-plane" class="fa fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
         </section>
 
-        <section id="copywrite" class="center-content grey-text">
+        <section id="copywrite" class="center-content">
             <p>© 2025 All rights reserved</p>
         </section>
     </footer>
-
     <script src="script.js"></script>
 </body>
 

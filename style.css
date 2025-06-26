@@ -224,18 +224,6 @@ h4 {
     gap: 0.5rem;
 }
 
-.hidden {
-    visibility: hidden;
-    cursor: pointer;
-    border-top: 1px solid var(--grey);
-    padding-top: 1rem;
-    box-shadow: var(--bg-dark);
-}
-
-.show:hover, .hidden, h2{
-    visibility: visible;
-}
-
 img:hover {
     transform: scale(1.05);
 }
