@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
 :root {
     --bg-gradient: #0f2027, #203a43, #2c5364;
     --bg-light: #203a43;
@@ -159,7 +161,7 @@ h2 {
 .spacer-8x { margin-bottom: 8rem; }
 
 .scroll-anchor {
-    scroll-margin-top: 60px;
+    scroll-margin-top: 10px;
 }
 
 h3 {
