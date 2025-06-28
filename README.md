@@ -1,2 +1,2 @@
-This is my personal portfolio page.
-Feel free to look around.
+Welcome to my personal portfolio.
+Feel free to explore my work, projects, and skills.
