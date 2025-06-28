@@ -1,2 +1,2 @@
 Welcome to my personal portfolio.
-Feel free to explore my work, projects, and skills.
+Feel free to explore my education, projects, and skills.
