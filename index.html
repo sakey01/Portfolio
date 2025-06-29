@@ -1,189 +1,314 @@
 <!DOCTYPE html>
-<head>
-    <meta lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sheikh's Portfolio with projects">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sheikh's Portfolio with projects" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="center-content inline">
-            <ul class="nav-group gap-2x padding">
-                <li><a id="home-nav" href="#" class="nav-item">Home</a></li>
-                <li><a id="about-nav" href="#about" class="nav-item">About</a></li>
-                <li><a id="project-nav" href="#projects" class="nav-item">Projects</a></li>
-                <li><a id='education-nav' href="#education" class="nav-item">Education</a></li>
-            </ul>
-            <!-- <i id="menu-icon" class="material-icons"><a class="">menu</a></i> -->
-        </nav>
+      <nav class="center-content inline">
+        <ul class="nav-group gap-2x padding">
+          <li><a id="home-nav" href="#" class="nav-item">Home</a></li>
+          <li><a id="about-nav" href="#about" class="nav-item">About</a></li>
+          <li>
+            <a id="project-nav" href="#projects" class="nav-item">Projects</a>
+          </li>
+          <li>
+            <a id="education-nav" href="#education" class="nav-item"
+              >Education</a
+            >
+          </li>
+        </ul>
+        <!--
+        <span class="inline"
+          ><i id="dark-mode-icon" class="material-icons"
+            ><a class="">dark_mode</a></i
+          >
+          <i id="menu-icon" class="material-icons"
+            ><a class="">menu</a></i
+          ></span>
+          -->
+      </nav>
     </header>
 
     <main>
-        <section id="home" class="center-content">
+      <section id="home" class="center-content">
+        <div>
+          <h1 id="home-title" class="spacer">Sheikh Ahmed</h1>
+          <p>Aspiring Full-Stack Developer</p>
+          <blockquote class="grey-text quotes" cite="Thomas Fuchs">
+            <q><i>The best error message is the one that never shows up.</i></q>
+            — <strong>Thomas Fuchs</strong>
+          </blockquote>
+          <div class="button-group gap-2x">
+            <button onclick="location.href='#projects'" class="grey-shadow">
+              View Projects<i class="material-icons left-margin"
+                >arrow_forward</i
+              >
+            </button>
+            <button
+              onclick="location.href='#contacts'"
+              class="hollow-button grey-shadow"
+            >
+              Contact Me<i class="material-icons left-margin">person</i>
+            </button>
+          </div>
+        </div>
+        <div id="scroll-button" class="center-content grey-text divider">
+          <a href="#about">Scroll down</a>
+        </div>
+      </section>
+
+      <section id="about" class="scroll-anchor">
+        <div>
+          <div class="spacer-4x">
+            <h2 id="about-title" class="center-content spacer">About Me</h2>
+            <p class="center-content grey-text">
+              Focused on creating Clean and Efficient Code
+            </p>
+          </div>
+          <div class="column non-column gap-4x">
             <div>
-                <h1 class="spacer">Sheikh Ahmed</h1>
-                <p>Aspiring Full-Stack Developer</p>
-                <p class="grey-text quotes"><q><i>The best error message is the one that never shows up.</i></q> — <strong>Thomas Fuchs</strong></p>
-                <div class="button-group gap-2x">
-                    <button onclick="location.href='#projects'" class="grey-shadow">View Projects<i class="material-icons left-margin">arrow_forward</i></button>
-                    <button onclick="location.href='#contacts'" class="hollow-button grey-shadow">Contact Me<i class="material-icons left-margin">person</i></button>
-                </div>
+              <h3 class="spacer-2x">Who am I?</h3>
+              <div class="section-text grey-text">
+                <p class="spacer-2x">
+                  Hey, I'm Sheikh, a second-year Computer Science undergraduate
+                  studying in London. My expertise is in Java, thanks to
+                  tackling plenty of medium-level LeetCode problems, but I'm
+                  expanding into full-stack development, starting with this
+                  portfolio page. I've built an e-commerce website as part of a
+                  team, leading the back-end development and testing, and I'm
+                  currently working on an iOS app on the side.
+                </p>
+                <p class="spacer-2x">
+                  I'm eager to break into full-stack development because I love
+                  building things, enjoy putting pieces together, and like to
+                  express my creativity.
+                </p>
+                <p class="spacer-2x">
+                  When I'm not coding, I enjoy exploring new tech, keeping up
+                  with industry trends, and working on personal projects. But
+                  you'll probably just find me binging the latest show on
+                  Netflix.
+                </p>
+              </div>
             </div>
-            <div id="scroll-button" class="center-content grey-text divider"><a href="#about">Scroll down</a></div>
-        </section>
+            <div id="skills" class="spacer-4x">
+              <h3 class="spacer-2x">Skills</h3>
+              <div>
+                <span class="translucent-bg">C</span>
+                <span class="translucent-bg">C++</span>
+                <span class="translucent-bg">CSS</span>
+                <span class="translucent-bg">HTML</span>
+                <span class="translucent-bg">Java</span>
+                <span class="translucent-bg">JavaScript</span>
+                <span class="translucent-bg">Python</span>
+                <span class="translucent-bg">SQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section id="about" class="scroll-anchor">
+      <section id="projects" class="scroll-anchor center-content">
+        <div class="spacer-4x center-content">
+          <h2 id="projects-title" class="spacer">Projects</h2>
+          <p class="center-content grey-text">Some of my recent work</p>
+        </div>
+        <div class="column non-column gap-2x">
+          <article class="project-card dark-bg spacer">
+            <figure>
+              <img
+                src="assests/images/gfd.png"
+                alt="Gluten Free Destiny e-commerce website screenshot"
+                width="400"
+                height="600"
+                class="spacer"
+              />
+              <figcaption class="padding">
+                <div class="spacer-2x">
+                  <h3 class="spacer">Gluten Free Destiny</h3>
+                  <p class="grey-text spacer">
+                    An e-commerce store that caters to individuals with special
+                    dietary needs
+                  </p>
+                </div>
+                <div class="spacer-2x">
+                  <span class="translucent-bg skill-box">WordPress</span>
+                  <span class="translucent-bg skill-box">Plugin</span>
+                  <span class="translucent-bg skill-box">Figma</span>
+                  <span class="translucent-bg skill-box">UX</span>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="project-card dark-bg spacer">
+            <figure>
+              <img
+                src="assests/images/coming_soon.jpg"
+                alt="Coming soon project placeholder"
+                width="400"
+                height="600"
+                class="spacer"
+              />
+              <figcaption class="padding spacer">
+                <div class="spacer-2x">
+                  <h3 class="spacer">Coming Soon</h3>
+                  <p class="grey-text"></p>
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </section>
+
+      <section id="education" class="scroll-anchor">
+        <div>
+          <div class="spacer-4x">
+            <h2 id="education-title" class="center-content spacer">
+              Education
+            </h2>
+            <p class="center-content grey-text">Academic background</p>
+          </div>
+          <div class="gap-4x">
             <div>
-                <div class="spacer-4x">
-                    <h2 class="center-content spacer">About Me</h2>
-                    <p class="center-content grey-text">Focused on creating Clean and Efficient Code</p>
-                </div>
-                <div class="column non-column gap-4x">
-                    <div>
-                        <h3 class="spacer-2x">Who am I?</h3>
-                        <div class="section-text grey-text">
-                            <p class="spacer-2x">
-                                Hey, I’m Sheikh, a second-year Computer Science undergraduate studying in London. My expertise is in Java, thanks to tackling plenty of medium-level LeetCode problems, but I’m expanding into full-stack development, starting with this portfolio page. I’ve built an e-commerce website as part of a team, leading the back-end development and testing, and I’m currently working on an iOS app on the side.
-                            </p>
-                            <P class="spacer-2x">
-                                 I’m eager to break into full-stack development because I love building things, enjoy putting pieces together, and like to express my creativity.
-                            </P>
-                            <p class="spacer-2x">
-                                When I’m not coding, I enjoy exploring new tech, keeping up with industry trends, and working on personal projects. But you’ll probably just find me binging the latest show on Netflix.
-                            </p>
-                        </div>
-                    </div>
-                    <div id="skills" class="spacer-4x">
-                        <h3 class="spacer-2x">Skills</h3>
-                        <div>
-                            <span class="translucent-bg">C</span>
-                            <span class="translucent-bg">C++</span>
-                            <span class="translucent-bg">CSS</span>
-                            <span class="translucent-bg">HTML</span>
-                            <span class="translucent-bg">Java</span>
-                            <span class="translucent-bg">JavaScript</span>
-                            <span class="translucent-bg">Python</span>
-                            <span class="translucent-bg">SQL</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+              <span class="inline">
+                <i id="school-icon" class="material-icons"
+                  >school</i
+                >
+                <h3 class="spacer left-margin">Bachelors in Computer Science</h3>
+              </span>
 
-        <section id="projects" class="scroll-anchor center-content">
-            <div class="spacer-4x center-content">
-                <h2 class="spacer">Projects</h2>
-                <p class="center-content grey-text">Some of my recent work</p>
+              <p class="spacer">University of West London - London, UK</p>
+              <span class="inline spacer">
+                <i id="calander-icon" class="material-icons">calendar_month</i>
+                <time datetime="2023-10-08" class="left-margin"
+                  >2023 - Present</time
+                >
+              </span>
             </div>
-            <div class="column non-column gap-2x">
-                <article class="project-card dark-bg spacer">
-                    <figure>
-                        <img src="assests/images/gfd.png" alt="Gluten Free Destiny" width="400" height="600" class="spacer">
-                        <div class="padding">
-                            <div class="spacer-2x">
-                                <h3 class="spacer">Gluten Free Destiny</h3>
-                                <p class="grey-text spacer">An e-commerce store that caters to individuals with special dietary needs</p>
-                            </div>
-                            <div class="spacer-2x">
-                                <span class="translucent-bg skill-box">WordPress</span>
-                                <span class="translucent-bg skill-box">Plugin</span>
-                                <span class="translucent-bg skill-box">Figma</span>
-                                <span class="translucent-bg skill-box">UX</span>
-                            </div>
-                        </div>
-                    </figure>
-                </article>
-
-                <article class="project-card dark-bg spacer">
-                    <figure>
-                        <img src="assests/images/coming_soon.jpg" alt="Gluten Free Destiny" width="400" height="600" class="spacer">
-                        <div class="padding spacer">
-                            <div  class="spacer-2x">
-                                <h3 class="spacer">Coming Soon</h3>
-                                <p class="grey-text"></p>
-                            </div>
-                        </div>
-                    </figure>
-                </article>
+            <div class="spacer-2x">
+              <p>
+                Covered object-oriented programming in Java, algorithms, data
+                structures, mobile and web development, SQL databases, basics of
+                artificial intelligence, and computer networks
+              </p>
             </div>
-        </section>
-
-        <section id="education" class="scroll-anchor">
-            <div>
-                <div class="spacer-4x">
-                    <h2 class="center-content spacer">Education</h2>
-                    <p class="center-content grey-text">Academic background</p>
-                </div>
-                <div class="gap-4x">
-                    <div><i id="school-icon" class="material-icons left-margin">school</i></div>
-                    <div class="show">
-                        <h3 class="spacer">Bachelors in Computer Science</h3>
-                        <p class="spacer">University of West London - London, UK</p>
-                        <span class="inline spacer"><i class="material-icons">calendar_month</i><time datetime="2023-10-08" class="left-margin"></i>2023 - Present</time></span>
-                    </div>
-                    <div class="spacer-2x"><p>Covering a wide range of topics</p></div>
-                        <h4 class="spacer">Modules</h4>
-                        <div id="skills-list" class="column non-column">
-                            <ul>
-                                <li>Theory of Computation</li>
-                                <li>Data Communications</li>
-                                <li>Computing Group Project</li>
-                                <li>Programming Language Paradigms</li>
-                            </ul>
-                            <ul >
-                                <li>Advanced Algorithms</li>
-                                <li>Artificial Intelligence</li>
-                                <li>Mobile Web Application Development</li>
-                                <li>Information Systems and Databases</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <h4 class="spacer">Modules</h4>
+            <div id="skills-list" class="column non-column">
+              <ul>
+                <li>Theory of Computation</li>
+                <li>Data Communications</li>
+                <li>Computing Group Project</li>
+                <li>Programming Language Paradigms</li>
+              </ul>
+              <ul>
+                <li>Advanced Algorithms</li>
+                <li>Artificial Intelligence</li>
+                <li>Mobile Web Application Development</li>
+                <li>Information Systems and Databases</li>
+              </ul>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
-    
-    <footer class="dark-bg">
-        <section id="contacts" class="scroll-anchor">
-            <div class="center-content spacer-4x">
-                <h2 class="spacer">Contacts</h2>
-                <p class="center-content grey-text">Let's work together</p>
-            </div>
-            <div class="column non-column gap-3x">
-                <div>
-                    <div>
-                        <h3 class="spacer-2x">Get in Touch</h3>
-                        <p class="grey-text spacer-2x">I'm always open to new projects and opportunities. Got a question or just want to say hello? Feel free to reach out!</p>
-                    </div>
-                    <div>
-                        <ul class="icons-list spacer-2x gap">
-                            <a href="https://github.com/sakey01" id="github-icon" class="icon"><i class="fa fa-github"></i></a>
-                            <a href="mailto:sheikh36ahmed@gmail.com" id="mail-icon" class="icon"><i class="fa fa-envelope"></i></a>
-                            <a href="https://www.linkedin.com/feed/" id="linkedin-icon" class="icon"><i class="fa fa-linkedin-square"></i></a>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <form id="contact-form" action="/submit" method="POST" class="gap">
-                        <input id="input-name" type="text" name="fname" placeholder="Your Name" class="form-field" required="">
-                        <input id="input-email" type="email" name="email" placeholder="Your Email" class="form-field" required="">
-                        <input id="msg-box" type="text" name="message" placeholder="Your Message" class="form-field" required="">
-                        <button id="submit-btn" class="grey-shadow center-content inline gap"><span class="left-margin">Send Message</span><i id="paper-plane" class="fa fa-paper-plane"></i></button>
-                    </form>
-                </div>
-            </div>
-        </section>
 
-        <section id="copywrite" class="center-content">
-            <p>© 2025 All rights reserved</p>
-        </section>
+    <footer class="dark-bg">
+      <section id="contacts" class="scroll-anchor">
+        <div class="center-content spacer-4x">
+          <h2 id="contacts-title" class="spacer">Contacts</h2>
+          <p class="center-content grey-text">Let's work together</p>
+        </div>
+        <div class="column non-column gap-3x">
+          <div>
+            <div>
+              <h3 class="spacer-2x">Get in Touch</h3>
+              <p class="grey-text spacer-2x">
+                I'm always open to new projects and opportunities. Got a
+                question or just want to say hello? Feel free to reach out!
+              </p>
+            </div>
+            <div>
+              <ul class="icons-list spacer-2x gap">
+                <li>
+                  <a
+                    href="https://github.com/sakey01"
+                    id="github-icon"
+                    class="icon"
+                    ><i class="fa fa-github"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="mailto:sheikh36ahmed@gmail.com"
+                    id="mail-icon"
+                    class="icon"
+                    ><i class="fa fa-envelope"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/feed/"
+                    id="linkedin-icon"
+                    class="icon"
+                    ><i class="fa fa-linkedin-square"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <form id="contact-form" action="/submit" method="POST" class="gap">
+              <input
+                id="input-name"
+                type="text"
+                name="fname"
+                placeholder="Your Name"
+                class="form-field"
+                required=""
+              />
+              <input
+                id="input-email"
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                class="form-field"
+                required=""
+              />
+              <textarea
+                id="msg-box"
+                name="message"
+                placeholder="Your Message"
+                class="form-field"
+                required=""
+              ></textarea>
+              <button id="submit-btn" class="grey-shadow" type="submit">
+                <span>Send Message</span
+                ><i id="paper-plane" class="fa fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="copywrite" class="center-content">
+        <p>© 2025 All rights reserved</p>
+      </section>
     </footer>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
