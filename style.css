@@ -304,43 +304,23 @@ button:hover {
 }
 
 input,
-#msg-box {
-  padding: 1em;
+#msg-box,
+#submit-btn {
   width: 100%;
-  min-height: 50%;
-  max-height: 80%;
+  box-sizing: border-box;
+  padding: 1em;
   border-radius: 0.5rem;
-  background: transparent;
+  font-size: 1rem;
   border: 1px solid var(--grey);
-  color: var(--white);
-  text-align: left;
-}
-
-input:active {
-  border: 2px solid var(--white);
-}
-
-#msg-box {
-  border-radius: 0.5rem;
   background: transparent;
-  border: 1px solid var(--grey);
   color: var(--white);
-  min-height: 120px;
-  font-family: inherit;
-}
-
-#msg-box:active,
-#msg-box:focus {
-  border: 2px solid var(--white);
-  outline: none;
 }
 
 #submit-btn {
-  width: 100%;
-  border-radius: 0.5em;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5em;
+  cursor: pointer;
+  background: var(--white);
+  color: var(--bg-dark);
+  border: 1px solid var(--white);
 }
 
 #copywrite {
