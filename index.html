@@ -18,7 +18,7 @@
 
   <body>
     <header>
-      <nav class="center-content inline">
+      <nav>
         <ul class="nav-group gap-2x padding">
           <li><a id="home-nav" href="#" class="nav-item">Home</a></li>
           <li><a id="about-nav" href="#about" class="nav-item">About</a></li>
@@ -31,15 +31,9 @@
             >
           </li>
         </ul>
-        <!--
-        <span class="inline"
-          ><i id="dark-mode-icon" class="material-icons"
-            ><a class="">dark_mode</a></i
-          >
-          <i id="menu-icon" class="material-icons"
-            ><a class="">menu</a></i
-          ></span>
-          -->
+        <span class="nav-span">
+          <button id="menu-icon" class="material-icons nav-item">menu</button>
+        </span>
       </nav>
     </header>
 
@@ -81,7 +75,7 @@
           <div class="column non-column gap-4x">
             <div>
               <h3 class="spacer-2x">Who am I?</h3>
-              <div class="section-text grey-text">
+              <div class="section-text grey-text section-text">
                 <p class="spacer-2x">
                   Hey, I'm Sheikh, a second-year Computer Science undergraduate
                   studying in London. My expertise is in Java, thanks to
@@ -176,39 +170,44 @@
 
       <section id="education" class="scroll-anchor">
         <div>
-          <div class="spacer-4x">
-            <h2 id="education-title" class="center-content spacer">
-              Education
-            </h2>
-            <p class="center-content grey-text">Academic background</p>
-          </div>
-          <div class="gap-4x education-block">
-            <div>
-              <span class="inline">
-                <i id="school-icon" class="material-icons">school</i>
-                <h3 class="spacer left-margin">
-                  Bachelors in Computer Science
-                </h3>
-              </span>
+          <div>
+            <div class="show-item-on-hover">
+              <div class="spacer-4x">
+                <h2 id="education-title" class="center-content spacer">
+                  Education
+                </h2>
+                <p class="center-content grey-text">Academic background</p>
+              </div>
+              <div class="gap-4x education-block">
+                <span class="inline">
+                  <i id="school-icon" class="material-icons">school</i>
+                  <h3 class="spacer left-margin">
+                    Bachelors in Computer Science
+                  </h3>
+                </span>
 
-              <p class="spacer">University of West London - London, UK</p>
-              <span class="inline spacer align-center">
-                <i id="calander-icon" class="material-icons">calendar_month</i>
-                <time datetime="2023-10-08" class="left-margin"
-                  >2023 - Present</time
-                >
-              </span>
+                <p class="spacer">University of West London - London, UK</p>
+                <span class="inline spacer align-center">
+                  <i id="calander-icon" class="material-icons"
+                    >calendar_month</i
+                  >
+                  <time datetime="2023-10-08" class="left-margin"
+                    >2023 - Present</time
+                  >
+                </span>
+              </div>
+              <div class="spacer-2x">
+                <p class="section-text">
+                  Covered object-oriented programming, Agile methodologies,
+                  mobile and web development, SQL databases, introductory
+                  artificial intelligence, and computer networks.
+                </p>
+              </div>
             </div>
-            <div class="spacer-2x">
-              <p>
-                Covered object-oriented programming, Agile methodologies, mobile
-                and web development, SQL databases, introductory artificial
-                intelligence, and computer networks.
-              </p>
-            </div>
-            <div class="position-left">
+
+            <div id="all-modules">
               <h4 class="spacer">Modules</h4>
-              <div id="skills-list" class="column non-column">
+              <div id="skills-list" class="column non-column section-text">
                 <ul class="module-block">
                   <li>Information Systems and Databases</li>
                   <li>Data Communications</li>

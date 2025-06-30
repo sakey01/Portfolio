@@ -49,6 +49,7 @@ nav {
 .nav-group {
   display: flex;
   list-style: none;
+  justify-content: center;
   gap: 1.5rem;
 }
 
@@ -57,9 +58,18 @@ nav {
   color: var(--grey);
 }
 
+.nav-span {
+  display: flex;
+  justify-content: flex-end;
+}
+
 #menu-icon {
-  display: inline;
-  float: right;
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.4rem;
+  cursor: pointer;
 }
 
 #home {
@@ -106,7 +116,7 @@ h4 {
 }
 
 .section-text {
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   font-weight: 400;
 }
 
@@ -148,11 +158,6 @@ button:hover {
 
 .left-margin {
   margin-left: 0.5rem;
-}
-
-.position-left {
-  display: block;
-  justify-content: left;
 }
 
 .grey-shadow {
@@ -280,6 +285,7 @@ button:hover {
 
 .module-block {
   max-width: 20vw;
+  font-size: 0.9rem;
 }
 
 .icons-list {
@@ -392,7 +398,8 @@ input:active {
     padding: 5rem 2rem;
   }
 
-  .module-block, .education-block {
+  .module-block,
+  .education-block {
     max-width: 100vw;
   }
 
@@ -417,12 +424,38 @@ input:active {
     padding: 1rem;
     font-size: 1rem;
   }
+
+  .nav-group {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, var(--bg-gradient));
+    opacity: 99%;
+    flex-direction: column;
+    padding: 1rem 0;
+    gap: 0;
+  }
+
+  .nav-group.active {
+    display: flex;
+  }
+
+  .nav-group li {
+    display: flex;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid var(--bg-light);
+  }
+
+  #menu-icon {
+    display: flex;
+  }
 }
 
 @media (max-width: 480px) {
   body,
-  button,
-  .section-text {
+  button {
     font-size: 1rem;
   }
 
