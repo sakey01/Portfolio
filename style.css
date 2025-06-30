@@ -42,11 +42,12 @@ nav {
   justify-content: center;
   position: fixed;
   width: 100%;
+  opacity: 95%;
   z-index: 1;
   background: linear-gradient(90deg, var(--bg-gradient));
   box-shadow: 0 1px 2px var(--bg-dark);
   font-size: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .nav-group {
@@ -69,6 +70,7 @@ nav {
   color: var(--white);
   font-size: 1.4rem;
   cursor: pointer;
+  margin: 0 1rem;
 }
 
 #contacts-nav {
@@ -135,15 +137,13 @@ h4 {
 button {
   display: inline-flex;
   align-items: center;
-  padding: 12px 32px;
+  padding: 2vh 2vw;
   border-radius: 2rem;
   border: 1px solid var(--white);
   background: var(--white);
   color: var(--bg-dark);
   cursor: pointer;
-  letter-spacing: 0.1rem;
-  transform: scaleY(1.1);
-  transition: transform 0.4s;
+  transition: transform 0.5s;
 }
 
 button:hover {
@@ -168,7 +168,7 @@ button:hover {
 }
 
 .grey-shadow {
-  box-shadow: 0 4px 4px var(--grey);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
 }
 
 #scroll-button {
@@ -219,7 +219,7 @@ button:hover {
 }
 
 .scroll-anchor {
-  scroll-margin-top: 10px;
+  scroll-margin-top: 5vh;
 }
 
 .translucent-bg {
@@ -228,7 +228,7 @@ button:hover {
   padding: 0.5rem 1.5rem;
   margin: 4px;
   background-color: var(--bg-light);
-  box-shadow: 0 4px 8px rgba(200, 200, 200, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 #projects {
@@ -244,7 +244,7 @@ button:hover {
   height: 60vh;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .padding {
@@ -273,21 +273,14 @@ button:hover {
 }
 
 #about,
-#contacts {
-  padding: 6rem 24rem;
-}
-
+#contacts,
 #education {
-  padding: 6rem 12rem;
+  padding: 6vh 24vw;
 }
 
 #school-icon,
 #calander-icon {
   font-size: 1.8rem;
-}
-
-.education-block {
-  max-width: 50vw;
 }
 
 .module-block {
@@ -310,12 +303,12 @@ button:hover {
   gap: 10px;
 }
 
-form {
-  display: grid;
-}
-
-input {
-  padding: 0.8rem;
+input,
+#msg-box {
+  padding: 1em;
+  width: 100%;
+  min-height: 50%;
+  max-height: 80%;
   border-radius: 0.5rem;
   background: transparent;
   border: 1px solid var(--grey);
@@ -328,12 +321,10 @@ input:active {
 }
 
 #msg-box {
-  padding: 0.8rem;
   border-radius: 0.5rem;
   background: transparent;
   border: 1px solid var(--grey);
   color: var(--white);
-  text-align: left;
   min-height: 120px;
   font-family: inherit;
 }
@@ -345,19 +336,16 @@ input:active {
 }
 
 #submit-btn {
-  border-radius: 0.5rem;
-  padding: 0.8rem 1.5rem;
-  display: inline-flex;
+  width: 100%;
+  border-radius: 0.5em;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  width: 100%;
+  gap: 0.5em;
 }
 
 #copywrite {
   font-size: 0.875rem;
   padding: 1rem;
-  opacity: 80%;
 }
 
 .dark-bg {
@@ -480,12 +468,17 @@ input:active {
 
   h1 {
     font-size: 1.8rem;
+    margin-top: 2rem;
   }
   h2 {
     font-size: 1.4rem;
   }
   h3 {
     font-size: 1.2rem;
+  }
+
+  button {
+    padding: 3vh 3vw;
   }
 
   #home {
