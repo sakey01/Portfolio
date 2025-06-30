@@ -6,8 +6,8 @@
   --bg-medium: #1f4352;
   --bg-dark: #0f2027;
   --white: whitesmoke;
+  --black: black;
   --grey: #bbbbbb;
-  --font-1x: 1.2rem;
 }
 
 * {
@@ -23,7 +23,7 @@ html {
 
 body {
   color: var(--white);
-  font-size: var(--font-1x);
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -43,11 +43,13 @@ nav {
   z-index: 1;
   background: linear-gradient(90deg, var(--bg-gradient));
   box-shadow: 0 1px 2px var(--bg-dark);
+  font-size: 1rem;
 }
 
 .nav-group {
   display: flex;
   list-style: none;
+  gap: 1.5rem;
 }
 
 .nav-item:hover,
@@ -74,25 +76,29 @@ nav {
   text-align: center;
 }
 
+.align-center {
+  align-items: center;
+}
+
 h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: 0.4px;
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 0.4px;
 }
 
 h4 {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
 }
 
 .grey-text {
@@ -100,7 +106,7 @@ h4 {
 }
 
 .section-text {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
@@ -144,6 +150,11 @@ button:hover {
   margin-left: 0.5rem;
 }
 
+.position-left {
+  display: block;
+  justify-content: left;
+}
+
 .grey-shadow {
   box-shadow: 0 4px 4px var(--grey);
 }
@@ -166,7 +177,7 @@ button:hover {
 
 .column {
   display: grid;
-  grid-template-columns: 50% 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .gap {
@@ -209,11 +220,11 @@ button:hover {
 }
 
 #projects {
-  padding: 8em 2rem;
+  padding: 4em 2rem;
 }
 
 .project-card {
-  color: white;
+  color: var(--white);
   text-align: left;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -258,8 +269,17 @@ button:hover {
   padding: 6rem 12rem;
 }
 
-#school-icon, #calander-icon {
+#school-icon,
+#calander-icon {
   font-size: 1.8rem;
+}
+
+.education-block {
+  max-width: 50vw;
+}
+
+.module-block {
+  max-width: 20vw;
 }
 
 .icons-list {
@@ -372,10 +392,14 @@ input:active {
     padding: 5rem 2rem;
   }
 
+  .module-block, .education-block {
+    max-width: 100vw;
+  }
+
   .project-card {
     max-width: 100%;
     height: auto;
-    min-height: 40rem;
+    min-height: 30rem;
   }
 
   .button-group {
