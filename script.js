@@ -1,7 +1,4 @@
-// optional dark/light toggle
-
-//media query to hide nav bar and have a menu instead
-
+// Toggle mobile menu
 document.addEventListener("DOMContentLoaded", () => {
   typeWriter();
 
@@ -20,27 +17,24 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  window.addEventListener("click", (e) => {
+    if (
+      navLinks.classList.contains("active") &&
+      !navLinks.contains(e.target) &&
+      !menuIcon.contains(e.target)
+    ) {
+      navLinks.classList.remove("active");
+    }
+  });
 });
 
-// moving underline for nav bar
-const navItems = document.querySelectorAll("nav ul li");
+// Toggle dark mode
 
-const Scrollobserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        console.log("Now viewing:", entry.target.id);
-      }
-    });
-  },
-  { threshold: 0.5 }
-);
-
-// typing quote effect
+// Typing quote effect for the home page
 let i = 0;
 function typeWriter(quote) {
-  quote =
-    '"The best error message is the one that never shows up. — Thomas Fuchs"';
+  quote = '"The best error message is the one that never shows up. — Thomas Fuchs"';
   if (i < quote.length) {
     document.querySelector("#home-quote").innerHTML += quote.charAt(i);
     i++;

@@ -38,29 +38,28 @@ a:hover {
 }
 
 nav {
+  display: flex;
+  justify-content: center;
   position: fixed;
   width: 100%;
   z-index: 1;
   background: linear-gradient(90deg, var(--bg-gradient));
   box-shadow: 0 1px 2px var(--bg-dark);
   font-size: 1rem;
+  padding: .5rem;
 }
 
 .nav-group {
   display: flex;
   list-style: none;
   justify-content: center;
+  margin-left: 1vw;
   gap: 1.5rem;
 }
 
 .nav-item:hover,
 .nav-item:focus {
   color: var(--grey);
-}
-
-.nav-span {
-  display: flex;
-  justify-content: flex-end;
 }
 
 #menu-icon {
@@ -70,6 +69,10 @@ nav {
   color: var(--white);
   font-size: 1.4rem;
   cursor: pointer;
+}
+
+#contacts-nav {
+  display: none;
 }
 
 #home {
@@ -109,6 +112,10 @@ h3 {
 
 h4 {
   font-size: 1.1rem;
+}
+
+.hide {
+  display: none;
 }
 
 .grey-text {
@@ -377,6 +384,41 @@ input:active {
 }
 
 @media (max-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .nav-group {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, var(--bg-gradient));
+    opacity: 90%;
+    flex-direction: column;
+    padding: 1rem 0;
+    gap: 0;
+    margin-left: 0;
+  }
+
+  .nav-group.active {
+    display: flex;
+  }
+
+  .nav-group li {
+    display: flex;
+    padding: 1rem;
+    border: 1px solid var(--bg-light);
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
   h1 {
     font-size: 2.2rem;
   }
@@ -425,30 +467,7 @@ input:active {
     font-size: 1rem;
   }
 
-  .nav-group {
-    display: none;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    background: linear-gradient(90deg, var(--bg-gradient));
-    opacity: 99%;
-    flex-direction: column;
-    padding: 1rem 0;
-    gap: 0;
-  }
-
-  .nav-group.active {
-    display: flex;
-  }
-
-  .nav-group li {
-    display: flex;
-    padding: 1rem;
-    text-align: center;
-    border: 1px solid var(--bg-light);
-  }
-
-  #menu-icon {
+  #contacts-nav {
     display: flex;
   }
 }
