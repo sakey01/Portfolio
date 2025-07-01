@@ -15,7 +15,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   font-family: "Inter", sans-serif;
@@ -48,15 +49,14 @@ nav {
   background: linear-gradient(90deg, var(--bg-gradient));
   box-shadow: 0 1px 2px var(--bg-dark);
   font-size: 1rem;
-  padding: 0.5rem;
+  padding: 0.5em;
 }
 
 .nav-group {
   display: flex;
   list-style: none;
   justify-content: center;
-  margin-left: 1vw;
-  gap: 1.5rem;
+  gap: 1.5em;
 }
 
 .nav-item:hover,
@@ -71,7 +71,6 @@ nav {
   color: var(--white);
   font-size: 1.4rem;
   cursor: pointer;
-  margin: 0 1rem;
 }
 
 #contacts-nav {
@@ -79,12 +78,8 @@ nav {
 }
 
 #home {
-  position: relative;
-  max-height: 100%;
-  max-width: 100vw;
-  box-sizing: border-box;
-  padding-left: 2vw;
-  padding-right: 2vw;
+  height: 100vh;
+  margin: 0 2em;
 }
 
 .center-content {
@@ -95,24 +90,17 @@ nav {
   text-align: center;
 }
 
-.align-center {
-  align-items: center;
-}
-
 h1 {
   font-size: 2.8rem;
-  font-weight: 700;
 }
 
 h2 {
   font-size: 1.8rem;
-  font-weight: 600;
   letter-spacing: 0.4px;
 }
 
 h3 {
   font-size: 1.2rem;
-  font-weight: 600;
   letter-spacing: 0.4px;
 }
 
@@ -126,11 +114,6 @@ h4 {
 
 .grey-text {
   color: var(--grey);
-}
-
-.section-text {
-  font-size: 0.95rem;
-  font-weight: 400;
 }
 
 .quotes {
@@ -161,7 +144,7 @@ button:hover {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1.2em;
+  gap: 1em;
 }
 
 .button-group button {
@@ -237,24 +220,20 @@ button:hover {
 .translucent-bg {
   display: inline-block;
   border-radius: 0.1rem;
-  padding: 0.5rem 1.5rem;
+  padding: 0.4em .8em;
   margin: 4px;
   background-color: var(--bg-light);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-#projects {
-  padding: 4em 2rem;
-}
 
 .project-card {
-  color: var(--white);
   text-align: left;
   border-radius: 0.5rem;
   overflow: hidden;
   max-width: 400px;
   height: 60vh;
-  display: flex;
+  min-height: 30em;
   flex-direction: column;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
@@ -274,30 +253,19 @@ button:hover {
   transform: scale(1.05);
 }
 
-.skill-box {
-  font-size: 0.8rem;
-  padding: 0.5rem;
-  background-color: var(--bg-light);
-}
-
-.module-column {
-  gap: 0.5rem;
+#projects {
+  padding: 16vh 4vw;
 }
 
 #about,
 #contacts,
 #education {
-  padding: 6vh 24vw;
+  padding: 16vh 20vw;
 }
 
 #school-icon,
 #calander-icon {
   font-size: 1.8rem;
-}
-
-.module-block {
-  max-width: 20vw;
-  font-size: 0.9rem;
 }
 
 .icons-list {
@@ -306,13 +274,8 @@ button:hover {
   font-size: 1.4rem;
 }
 
-.icon:hover {
-  transform: scale(1.1);
-}
-
 .inline {
   display: flex;
-  gap: 10px;
 }
 
 input,
@@ -343,7 +306,8 @@ input,
 
 #copywrite {
   font-size: 0.875rem;
-  padding: 1rem;
+  padding: 1em;
+  opacity: 90%;
 }
 
 .dark-bg {
@@ -351,35 +315,12 @@ input,
   color: var(--white);
 }
 
-@media (max-width: 1440px) {
-  #about,
-  #contacts {
-    padding: 6rem 8rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  #about,
-  #contacts {
-    padding: 6rem 4rem;
-  }
-
-  #education {
-    padding: 6rem 6rem;
-  }
-
-  #education > div > div {
-    max-width: 100%;
-    padding-left: 4vw;
-    padding-right: 4vw;
-  }
-}
-
 @media (max-width: 768px) {
   nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding: 1em;
   }
 
   .nav-group {
@@ -408,16 +349,14 @@ input,
 
   #menu-icon {
     display: block;
+    margin-right: 2em;
   }
 
   h1 {
-    font-size: 2.2rem;
+    font-size: 2.2em;
   }
   h2 {
-    font-size: 1.7rem;
-  }
-  h3 {
-    font-size: 1.3rem;
+    font-size: 1.8em;
   }
 
   .non-column {
@@ -425,113 +364,23 @@ input,
     flex-direction: column;
   }
 
+  .quotes {
+    margin: 2em;
+  }
+
+  #home {
+    padding: 2em 0;
+
+  }
+
   #about,
   #education,
   #contacts {
-    padding: 5rem 2rem;
+    padding: 8rem 2rem;
   }
 
   .module-block,
   .education-block {
     max-width: 100vw;
   }
-
-  .project-card {
-    max-width: 100%;
-    height: auto;
-    min-height: 30rem;
-  }
-
-  input,
-  #msg-box {
-    padding: 1rem;
-    font-size: 1rem;
-  }
-
-  #submit-btn {
-    padding: 1rem;
-    font-size: 1rem;
-  }
-
-  #contacts-nav {
-    display: flex;
-  }
-
-  #education > div > div {
-    max-width: 100%;
-    padding-left: 2vw;
-    padding-right: 2vw;
-  }
-}
-
-@media (max-width: 480px) {
-  body,
-  button {
-    font-size: 1rem;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-    margin-top: 2.5rem;
-  }
-  h2 {
-    font-size: 1.4rem;
-  }
-  h3 {
-    font-size: 1.2rem;
-  }
-
-  button {
-    padding: 3vh 3vw;
-  }
-
-  #home {
-    padding-top: 4.5rem;
-    padding-bottom: 5rem;
-  }
-
-  .project-card {
-    max-width: 300px;
-  }
-
-  input,
-  #msg-box {
-    padding: 0.8rem;
-    font-size: 0.95rem;
-  }
-
-  #submit-btn {
-    padding: 0.8rem;
-    font-size: 0.95rem;
-  }
-
-  #education > div > div {
-    max-width: 100%;
-    padding-left: 1vw;
-    padding-right: 1vw;
-  }
-
-  .button-group button {
-    padding: 0.7em 1.2em;
-    font-size: 0.98rem;
-    min-width: 110px;
-  }
-
-  .scroll-anchor {
-    scroll-margin-top: 4.5rem;
-  }
-
-  #scroll-button {
-    margin-bottom: 1.2rem;
-    margin-top: -1.2rem;
-  }
-}
-
-#education > div > div {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  padding-left: 2vw;
-  padding-right: 2vw;
 }
