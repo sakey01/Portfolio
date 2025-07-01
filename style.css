@@ -39,6 +39,7 @@ a:hover {
   cursor: pointer;
 }
 
+/* ===== HEADER & NAVIGATION ===== */
 nav {
   display: flex;
   justify-content: center;
@@ -64,6 +65,14 @@ nav {
   color: var(--grey);
 }
 
+#nav-underline {
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background: #a7a7a7;
+  transition: left 0.3s, width 0.3s;
+}
+
 #menu-icon {
   display: none;
   background: none;
@@ -73,10 +82,7 @@ nav {
   cursor: pointer;
 }
 
-#contacts-nav {
-  display: none;
-}
-
+/* ===== HOME SECTION ===== */
 #home {
   height: 100vh;
   margin: 0 2em;
@@ -106,10 +112,6 @@ h3 {
 
 h4 {
   font-size: 1.1rem;
-}
-
-.hide {
-  display: none;
 }
 
 .grey-text {
@@ -158,10 +160,6 @@ button:hover {
   color: var(--white);
 }
 
-.left-margin {
-  margin-left: 0.5rem;
-}
-
 .grey-shadow {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
 }
@@ -182,50 +180,24 @@ button:hover {
   }
 }
 
-.column {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.gap {
-  gap: 1rem;
-}
-.gap-2x {
-  gap: 2rem;
-}
-.gap-3x {
-  gap: 3rem;
-}
-.gap-4x {
-  gap: 4rem;
-}
-
-.spacer {
-  margin-bottom: 1rem;
-}
-.spacer-2x {
-  margin-bottom: 2rem;
-}
-.spacer-4x {
-  margin-bottom: 4rem;
-}
-.spacer-8x {
-  margin-bottom: 8rem;
-}
-
-.scroll-anchor {
-  scroll-margin-top: 5vh;
+/* ===== ABOUT SECTION ===== */
+#about {
+  padding: 16vh 20vw;
 }
 
 .translucent-bg {
   display: inline-block;
   border-radius: 0.1rem;
-  padding: 0.4em .8em;
+  padding: 0.4em 0.8em;
   margin: 4px;
   background-color: var(--bg-light);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
+/* ===== PROJECTS SECTION ===== */
+#projects {
+  padding: 16vh 4vw;
+}
 
 .project-card {
   text-align: left;
@@ -236,10 +208,6 @@ button:hover {
   min-height: 30em;
   flex-direction: column;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-.padding {
-  padding: 1rem;
 }
 
 .project-card img {
@@ -253,12 +221,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-#projects {
-  padding: 16vh 4vw;
-}
-
-#about,
-#contacts,
+/* ===== EDUCATION SECTION ===== */
 #education {
   padding: 16vh 20vw;
 }
@@ -266,6 +229,15 @@ button:hover {
 #school-icon,
 #calander-icon {
   font-size: 1.8rem;
+}
+
+.left-margin {
+  margin-left: 0.5rem;
+}
+
+/* ===== CONTACTS SECTION ===== */
+#contacts {
+  padding: 16vh 20vw;
 }
 
 .icons-list {
@@ -304,6 +276,7 @@ input,
   gap: 1em;
 }
 
+/* ===== FOOTER ===== */
 #copywrite {
   font-size: 0.875rem;
   padding: 1em;
@@ -313,6 +286,50 @@ input,
 .dark-bg {
   background-color: var(--bg-dark);
   color: var(--white);
+}
+
+/* ===== UTILITY CLASSES ===== */
+.hide {
+  display: none;
+}
+
+.column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.padding {
+  padding: 1rem;
+}
+
+.scroll-anchor {
+  scroll-margin-top: 5vh;
+}
+
+.gap {
+  gap: 1rem;
+}
+.gap-2x {
+  gap: 2rem;
+}
+.gap-3x {
+  gap: 3rem;
+}
+.gap-4x {
+  gap: 4rem;
+}
+
+.spacer {
+  margin-bottom: 1rem;
+}
+.spacer-2x {
+  margin-bottom: 2rem;
+}
+.spacer-4x {
+  margin-bottom: 4rem;
+}
+.spacer-8x {
+  margin-bottom: 8rem;
 }
 
 @media (max-width: 768px) {
@@ -370,7 +387,6 @@ input,
 
   #home {
     padding: 2em 0;
-
   }
 
   #about,

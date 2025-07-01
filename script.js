@@ -29,6 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//moving underline for nav bar
+window.addEventListener('scroll', (e) => {
+  
+})
+
 // Toggle dark mode
 
 // Typing quote effect for the home page
@@ -36,7 +41,7 @@ let i = 0;
 function typeWriter(quote) {
   quote = '"The best error message is the one that never shows up. — Thomas Fuchs"';
   if (i < quote.length) {
-    document.querySelector("#home-quote").innerHTML += quote.charAt(i);
+    document.querySelector("#quote").innerHTML += quote.charAt(i);
     i++;
     setTimeout(typeWriter, 40);
   }
