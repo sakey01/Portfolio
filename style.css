@@ -66,7 +66,7 @@ nav a:after {
   left: 0;
   width: 0%;
   height: 2px;
-  transition: all .2s;
+  transition: all .4s;
 }
 
 nav a:hover::after {
@@ -243,7 +243,7 @@ span {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.4em;
+  gap: 0.5em;
 }
 
 .view-btn {
@@ -251,7 +251,7 @@ span {
   bottom: 5%;
   border-radius: 0.2em;
   font-size: 1rem;
-  border: 2px solid var(--white);
+  border: 1px solid var(--white);
   color: var(--white);
   background-color: transparent;
 }
@@ -265,15 +265,6 @@ span {
   padding: 16vh 20vw;
 }
 
-#school-icon,
-#calander-icon {
-  font-size: 1.8rem;
-}
-
-.left-margin {
-  margin-left: 0.5rem;
-}
-
 /* ===== CONTACTS SECTION ===== */
 #contacts {
   padding: 16vh 20vw;
@@ -283,10 +274,6 @@ span {
   display: flex;
   list-style: none;
   font-size: 1.4rem;
-}
-
-.inline {
-  display: flex;
 }
 
 input,

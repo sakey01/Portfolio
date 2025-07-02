@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sections.forEach((section) => {
       const sectionHeight = section.offsetHeight;
-      const sectionTop = section.offsetTop - 240;
+      const sectionTop = section.offsetTop - 300;
       const sectionId = section.getAttribute("id");
 
       if (
