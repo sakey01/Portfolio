@@ -12,22 +12,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script defer src="script.js"></script>
   </head>
 
   <body>
     <header>
-      <nav>
+      <nav class="hidden">
         <ul class="nav-group padding">
-          <li><a id="nav-1" href="#" class="nav-item">Home</a></li>
-          <li><a id="nav-2" href="#about" class="nav-item">About</a></li>
+          <li><a href="#" class="nav-item">Home</a></li>
+          <li><a href="#about" class="nav-item">About</a></li>
           <li>
-            <a id="nav-3" href="#projects" class="nav-item">Projects</a>
+            <a href="#projects" class="nav-item">Projects</a>
           </li>
           <li>
-            <a id="nav-4" href="#education" class="nav-item">Education</a>
+            <a href="#education" class="nav-item">Education</a>
           </li>
           <li>
-            <a id="nav-5" href="#contacts" class="nav-item">Contacts</a>
+            <a href="#contacts" class="nav-item">Contacts</a>
           </li>
         </ul>
         <button id="menu-icon" class="material-icons nav-item">menu</button>
@@ -36,7 +37,7 @@
     </header>
 
     <main>
-      <section id="home" class="center-content">
+      <section id="home" class="center-content hidden">
         <div>
           <h1 class="spacer">Sheikh Ahmed</h1>
           <p>Aspiring Full-Stack Developer</p>
@@ -60,7 +61,7 @@
         </div>
       </section>
 
-      <section id="about">
+      <section id="about" class="hidden">
         <div>
           <div class="spacer-4x">
             <h2 class="center-content spacer">About Me</h2>
@@ -106,13 +107,13 @@
         </div>
       </section>
 
-      <section id="projects" class=" center-content">
+      <section id="projects" class="center-content hidden">
         <div class="spacer-4x center-content">
           <h2 class="spacer">Projects</h2>
           <p class="center-content grey-text">Some of my recent work</p>
         </div>
         <div class="column non-column gap-2x">
-          <article class="project-card dark-bg spacer">
+          <article class="project-card dark-bg spacer hidden">
             <figure>
               <img
                 src="assests/images/gfd.png"
@@ -134,12 +135,12 @@
                   <span class="translucent-bg">Figma</span>
                   <span class="translucent-bg">UX</span>
                 </div>
-                <button class="translucent-bg view-btn button-effect"><a  href="https://glutenfreedestiny.free.nf" target="_blank">View</a></button>
+                <button class="translucent-bg view-btn button-effect"><a  href="https://glutenfreedestiny.free.nf" target="_blank"><span>View<i class="material-icons">arrow_forward</i></span></a></button>
               </figcaption>
             </figure>
           </article>
 
-          <article class="project-card dark-bg spacer">
+          <article class="project-card dark-bg spacer hidden">
             <figure>
               <img
                 src="assests/images/coming_soon.jpg"
@@ -159,7 +160,7 @@
         </div>
       </section>
 
-      <section id="education" class="">
+      <section id="education" class="hidden">
         <div>
           <div>
             <div>
@@ -277,6 +278,5 @@
         <p>© 2025 All rights reserved</p>
       </section>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>

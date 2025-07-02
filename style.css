@@ -32,6 +32,7 @@ body {
 a {
   color: var(--white);
   text-decoration: none;
+  align-content: center;
 }
 
 a:hover {
@@ -132,7 +133,7 @@ button {
   background: var(--white);
   color: var(--bg-dark);
   cursor: pointer;
- 
+  gap: 0.4em;
 }
 
 button:hover {
@@ -229,10 +230,16 @@ button:hover {
   transform: scale(1.05);
 }
 
+span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4em;
+}
+
 .view-btn {
   position: absolute;
   bottom: 5%;
-  right: 10%;
   border-radius: 0.2em;
   font-size: 1rem;
   border: 2px solid var(--white);
@@ -320,6 +327,19 @@ input,
 .column {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(1px);
+  transform: translateY(-10%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
 }
 
 .padding {

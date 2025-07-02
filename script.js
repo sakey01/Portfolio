@@ -29,10 +29,25 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//moving underline for nav bar
-window.addEventListener('scroll', (e) => {
-  
+// moving underline for nav bar
+
+
+// animation effect for view
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+    else {
+      entry.target.classList.remove('show');
+    }
+  })
 })
+const hiddenEl = document.querySelectorAll(".hidden");
+hiddenEl.forEach((e) => observer.observe(e));
+
+
+
 
 // Toggle dark mode
 
