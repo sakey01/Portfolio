@@ -132,13 +132,12 @@ button {
   background: var(--white);
   color: var(--bg-dark);
   cursor: pointer;
-  transition: transform 0.5s;
+ 
 }
 
 button:hover {
   background-color: var(--grey);
   border-color: var(--grey);
-  transform: scale(1.04);
 }
 
 .button-group {
@@ -153,6 +152,14 @@ button:hover {
   padding: 0.9em 2.2em;
   font-size: 1.05rem;
   margin: 0;
+}
+
+.button-effect {
+  transition: transform 0.5s;
+}
+
+.button-effect:hover {
+  transform: translateY(-5%);
 }
 
 .hollow-button {
@@ -200,11 +207,12 @@ button:hover {
 }
 
 .project-card {
+  position: relative;
   text-align: left;
   border-radius: 0.5rem;
   overflow: hidden;
   max-width: 400px;
-  height: 60vh;
+  height: 70vh;
   min-height: 30em;
   flex-direction: column;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -212,13 +220,28 @@ button:hover {
 
 .project-card img {
   width: 100%;
-  height: 25vh;
+  height: 25%;
   display: block;
   transition: transform 0.15s ease-in-out;
 }
 
 .project-card img:hover {
   transform: scale(1.05);
+}
+
+.view-btn {
+  position: absolute;
+  bottom: 5%;
+  right: 10%;
+  border-radius: 0.2em;
+  font-size: 1rem;
+  border: 2px solid var(--white);
+  color: var(--white);
+  background-color: transparent;
+}
+.view-btn:hover {
+  background-color: var(--bg-dark);
+  transform: ease-in-out (0.8em);
 }
 
 /* ===== EDUCATION SECTION ===== */
@@ -274,6 +297,11 @@ input,
   color: var(--bg-dark);
   border: 1px solid var(--white);
   gap: 1em;
+  transition: transform 0.5s;
+}
+
+#submit-btn:hover {
+  transform: scale(1.02) !important;
 }
 
 /* ===== FOOTER ===== */
@@ -289,10 +317,6 @@ input,
 }
 
 /* ===== UTILITY CLASSES ===== */
-.hide {
-  display: none;
-}
-
 .column {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -300,10 +324,6 @@ input,
 
 .padding {
   padding: 1rem;
-}
-
-.scroll-anchor {
-  scroll-margin-top: 5vh;
 }
 
 .gap {

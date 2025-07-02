@@ -43,7 +43,7 @@ function typeWriter(quote) {
   if (i < quote.length) {
     document.querySelector("#quote").innerHTML += quote.charAt(i);
     i++;
-    setTimeout(typeWriter, 40);
+    setTimeout(typeWriter, 30);
   }
   return;
 }
