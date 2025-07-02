@@ -86,7 +86,4 @@ function typeWriter(quote) {
   return;
 }
 
-// show modules on hover (education section)
-
-
 // form for sending a message

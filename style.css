@@ -59,7 +59,6 @@ nav a {
 
 nav a:after {
   content: "";
-  position: relative;
   position: absolute;
   background-color: white;
   bottom: -10px;
@@ -81,6 +80,9 @@ nav a:hover::after {
   gap: 2em;
 }
 
+.nav-group a.active-underline::after {
+  width: 100% !important;
+}
 
 #menu-icon {
   display: none;
@@ -129,56 +131,6 @@ h4 {
 
 .quotes {
   margin: 4em 0 6em 0;
-}
-
-button {
-  display: inline-flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.2px;
-  border-radius: 2rem;
-  border: 1px solid var(--white);
-  background: var(--white);
-  color: var(--bg-dark);
-  cursor: pointer;
-  gap: 0.4em;
-}
-
-button:hover {
-  background-color: var(--grey);
-  border-color: var(--grey);
-}
-
-.button-group {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
-}
-
-.button-group button {
-  padding: 0.9em 2.2em;
-  font-size: 1.05rem;
-  margin: 0;
-}
-
-.button-effect {
-  transition: transform 0.5s;
-}
-
-.button-effect:hover {
-  transform: translateY(-5%);
-}
-
-
-.hollow-button {
-  background: transparent;
-  color: var(--white);
-}
-
-.grey-shadow {
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
 }
 
 #scroll-button {
@@ -263,6 +215,15 @@ span {
 /* ===== EDUCATION SECTION ===== */
 #education {
   padding: 16vh 20vw;
+}
+
+#school-icon,
+#calander-icon {
+  font-size: 1.8rem;
+}
+
+.left-margin {
+  margin-left: 0.5rem;
 }
 
 /* ===== CONTACTS SECTION ===== */
@@ -368,6 +329,55 @@ input,
   margin-bottom: 8rem;
 }
 
+button {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.2px;
+  border-radius: 2rem;
+  border: 1px solid var(--white);
+  background: var(--white);
+  color: var(--bg-dark);
+  cursor: pointer;
+  gap: 0.4em;
+}
+
+button:hover {
+  background-color: var(--grey);
+  border-color: var(--grey);
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.button-group button {
+  padding: 0.9em 2.2em;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.button-effect {
+  transition: transform 0.5s;
+}
+
+.button-effect:hover {
+  transform: translateY(-5%);
+}
+
+.hollow-button {
+  background: transparent;
+  color: var(--white);
+}
+
+.grey-shadow {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
 @media (max-width: 768px) {
   nav {
     display: flex;
@@ -435,8 +445,4 @@ input,
   .education-block {
     max-width: 100vw;
   }
-}
-
-.nav-group a.active-underline::after {
-  width: 100% !important;
 }
