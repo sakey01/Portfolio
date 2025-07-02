@@ -43,6 +43,7 @@ a:hover {
 /* ===== HEADER & NAVIGATION ===== */
 nav {
   display: flex;
+  position: relative;
   justify-content: center;
   position: fixed;
   width: 100%;
@@ -50,20 +51,23 @@ nav {
   z-index: 1;
   background: linear-gradient(90deg, var(--bg-gradient));
   box-shadow: 0 1px 2px var(--bg-dark);
-  font-size: 1rem;
   padding: 0.5em;
+}
+
+nav a {
+  position: relative;
+}
+
+nav a:hover {
+  color: var(--grey);
 }
 
 .nav-group {
   display: flex;
   list-style: none;
   justify-content: center;
-  gap: 1.5em;
-}
+  gap: 2em;
 
-.nav-item:hover,
-.nav-item:focus {
-  color: var(--grey);
 }
 
 #nav-underline {
@@ -161,6 +165,21 @@ button:hover {
 
 .button-effect:hover {
   transform: translateY(-5%);
+}
+
+nav a:after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  bottom: -10px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  transition: all .2s;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 .hollow-button {
