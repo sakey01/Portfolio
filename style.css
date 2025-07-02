@@ -36,7 +36,6 @@ a {
 }
 
 a:hover {
-  color: var(--grey);
   cursor: pointer;
 }
 
@@ -58,8 +57,21 @@ nav a {
   position: relative;
 }
 
-nav a:hover {
-  color: var(--grey);
+nav a:after {
+  content: "";
+  position: relative;
+  position: absolute;
+  background-color: white;
+  bottom: -10px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  transition: all .2s;
+}
+
+nav a:hover::after {
+  width: 100%;
+  color: var(--white);
 }
 
 .nav-group {
@@ -67,16 +79,8 @@ nav a:hover {
   list-style: none;
   justify-content: center;
   gap: 2em;
-
 }
 
-#nav-underline {
-  position: absolute;
-  height: 3px;
-  width: 0;
-  background: #a7a7a7;
-  transition: left 0.3s, width 0.3s;
-}
 
 #menu-icon {
   display: none;
@@ -167,20 +171,6 @@ button:hover {
   transform: translateY(-5%);
 }
 
-nav a:after {
-  content: "";
-  position: absolute;
-  background-color: white;
-  bottom: -10px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  transition: all .2s;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
 
 .hollow-button {
   background: transparent;
@@ -458,4 +448,8 @@ input,
   .education-block {
     max-width: 100vw;
   }
+}
+
+.nav-group a.active-underline::after {
+  width: 100% !important;
 }

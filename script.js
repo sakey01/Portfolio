@@ -27,29 +27,52 @@ document.addEventListener("DOMContentLoaded", () => {
       navLinks.classList.remove("active");
     }
   });
+
+  // Underline nav link on scroll
+  const sections = document.querySelectorAll("section[id]");
+  const navLinksAll = document.querySelectorAll(".nav-group a");
+
+  function activateNavLink() {
+    let scrollY = window.pageYOffset;
+
+    sections.forEach((section) => {
+      const sectionHeight = section.offsetHeight;
+      const sectionTop = section.offsetTop - 240;
+      const sectionId = section.getAttribute("id");
+
+      if (
+        scrollY >= sectionTop &&
+        scrollY < sectionTop + sectionHeight
+      ) {
+        navLinksAll.forEach((link) => {
+          link.classList.remove("active-underline");
+          if (link.getAttribute("href") === `#${sectionId}`) {
+            link.classList.add("active-underline");
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener("scroll", activateNavLink);
 });
-
-// moving underline for nav bar
-
 
 // animation effect for view
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('show');
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
     }
-    else {
-      entry.target.classList.remove('show');
-    }
-  })
-})
-const hiddenEl = document.querySelectorAll(".hidden");
-hiddenEl.forEach((e) => observer.observe(e));
-
-
+  });
+});
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((e) => observer.observe(e));
 
 
 // Toggle dark mode
+
 
 // Typing quote effect for the home page
 let i = 0;
@@ -64,5 +87,6 @@ function typeWriter(quote) {
 }
 
 // show modules on hover (education section)
+
 
 // form for sending a message
