@@ -70,10 +70,6 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((e) => observer.observe(e));
 
-
-// Toggle dark mode
-
-
 // Typing quote effect for the home page
 let i = 0;
 function typeWriter(quote) {
@@ -85,15 +81,3 @@ function typeWriter(quote) {
   }
   return;
 }
-
-// form for sending a message
-const form = document.getElementById('form');
-const name = document.getElementById('name');
-const email = document.getElementById('email');
-const msg = document.getElementById('msg');
-
-form.addEventListener('submit' , (e) => {
-  e.preventDefault();
-
-
-})

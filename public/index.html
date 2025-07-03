@@ -215,14 +215,14 @@
     </main>
 
     <footer class="dark-bg">
-      <section id="contacts" class="">
+      <section id="contacts" class="hidden">
         <div class="center-content spacer-4x">
           <h2 class="spacer">Contacts</h2>
           <p class="center-content grey-text">Let's work together</p>
         </div>
         <div class="column non-column gap-3x">
           <div>
-            <div>
+            <div class="hidden">
               <h3 class="spacer-2x">Get in Touch</h3>
               <p class="grey-text spacer-2x">
                 I'm always open to new projects and opportunities. Got a question or just want to
@@ -230,7 +230,7 @@
               </p>
             </div>
             <div>
-              <ul class="icons-list spacer-2x gap">
+              <ul class="icons-list spacer-2x gap hidden">
                 <li>
                   <a href="https://github.com/sakey01" target="_blank" class="icon"
                     ><i class="fa fa-github"></i
@@ -250,7 +250,7 @@
             </div>
           </div>
           <div>
-            <form id="form" action="/submit" method="POST" class="gap center-content">
+            <form id="form" action="/submit" method="POST" class="gap hidden center-content">
               <input id="name" type="text" name="fname" placeholder="Your Name" required="" />
               <input id="email" type="email" name="email" placeholder="Your Email" required="" />
               <textarea id="msg" name="message" placeholder="Your Message" required=""></textarea>
@@ -262,7 +262,7 @@
         </div>
       </section>
 
-      <div id="copywrite" class="center-content">
+      <div id="copywrite" class="center-content grey-text">
         <p>© 2025 All rights reserved</p>
       </div>
     </footer>
