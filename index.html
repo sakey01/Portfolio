@@ -49,7 +49,7 @@
             </button>
             <button
               onclick="location.href='#contacts'"
-              class="hollow-button grey-shadow  button-effect"
+              class="hollow-button grey-shadow button-effect"
             >
               Contact Me<i class="material-icons">person</i>
             </button>
@@ -134,7 +134,11 @@
                   <span class="translucent-bg">Figma</span>
                   <span class="translucent-bg">UX</span>
                 </div>
-                <button class="translucent-bg view-btn button-effect"><a  href="https://glutenfreedestiny.free.nf" target="_blank"><span>View<i class="material-icons">arrow_forward</i></span></a></button>
+                <button class="translucent-bg view-btn button-effect">
+                  <a href="https://glutenfreedestiny.free.nf" target="_blank"
+                    ><span>View<i class="material-icons">arrow_forward</i></span></a
+                  >
+                </button>
               </figcaption>
             </figure>
           </article>
@@ -161,7 +165,7 @@
 
       <section id="education" class="hidden">
         <div>
-          <div >
+          <div>
             <div>
               <div class="spacer-4x center-content">
                 <h2 class="center-content spacer">Education</h2>
@@ -246,25 +250,10 @@
             </div>
           </div>
           <div>
-            <form action="/submit" method="POST" class="gap center-content">
-              <input
-                type="text"
-                name="fname"
-                placeholder="Your Name"
-                required=""
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required=""
-              />
-              <textarea
-                id="msg-box"
-                name="message"
-                placeholder="Your Message"
-                required=""
-              ></textarea>
+            <form id="form" action="/submit" method="POST" class="gap center-content">
+              <input id="name" type="text" name="fname" placeholder="Your Name" required="" />
+              <input id="email" type="email" name="email" placeholder="Your Email" required="" />
+              <textarea id="msg" name="message" placeholder="Your Message" required=""></textarea>
               <button id="submit-btn" class="grey-shadow" type="submit">
                 <span>Send Message</span><i class="fa fa-paper-plane"></i>
               </button>

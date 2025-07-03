@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Underline nav link on scroll
   const sections = document.querySelectorAll("section[id]");
   const navLinksAll = document.querySelectorAll(".nav-group a");
+  navLinksAll[0].classList.add("active-underline");
 
   function activateNavLink() {
     let scrollY = window.pageYOffset;
@@ -53,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
   window.addEventListener("scroll", activateNavLink);
 });
 
@@ -87,3 +87,13 @@ function typeWriter(quote) {
 }
 
 // form for sending a message
+const form = document.getElementById('form');
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const msg = document.getElementById('msg');
+
+form.addEventListener('submit' , (e) => {
+  e.preventDefault();
+
+
+})

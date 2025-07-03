@@ -46,7 +46,6 @@ nav {
   justify-content: center;
   position: fixed;
   width: 100%;
-  opacity: 95%;
   z-index: 1;
   background: linear-gradient(90deg, var(--bg-gradient));
   box-shadow: 0 1px 2px var(--bg-dark);
@@ -81,7 +80,7 @@ nav a:hover::after {
 }
 
 .nav-group a.active-underline::after {
-  width: 100% !important;
+  width: 100%;
 }
 
 #menu-icon {
@@ -238,7 +237,7 @@ span {
 }
 
 input,
-#msg-box,
+#msg,
 #submit-btn {
   width: 100%;
   box-sizing: border-box;
@@ -250,7 +249,7 @@ input,
   font-family: inherit;
 }
 
-#msg-box {
+#msg {
   min-height: 10em;
 }
 
