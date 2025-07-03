@@ -24,7 +24,7 @@ Welcome to my personal portfolio. This site showcases my background, education, 
 
 ## How to View
 
-Visit the live site here: (https://sakey01.github.io/portfolio)
+Visit the live site here: [https://sakey01.github.io/portfolio](https://sheikh-ahmed.vercel.app/)
 
 ---
 
