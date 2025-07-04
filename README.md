@@ -19,6 +19,8 @@ Welcome to my personal portfolio. This site showcases my background, education, 
 - HTML  
 - CSS  
 - JavaScript
+- Node.js (Express)
+- Nodemailer
 
 ---
 

@@ -8,7 +8,6 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
-
 // reads html and sends a live server
 app.get("/", (req, res) => {
   fs.readFile("./public/index.html", "utf8", (err, html) => {
@@ -24,46 +23,54 @@ app.get("/", (req, res) => {
 async function mail(name, email, message) {
   const transporter = nodeMailer.createTransport({
     service: "Gmail",
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
     auth: {
       user: process.env.USER_EMAIL,
       pass: process.env.USER_PASS,
     },
   });
 
-  const msg = `<h2>New message from your portfolio site</h2>
-    <p><strong>Name:</strong> ${name}</p>
-    <p><strong>Message:</strong></p>
-    <p>${message}</p>`;
+  const msg = `
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+        body {
+          font-family = "Arial, sans-serif"
+          background-color: #f9f9f9;
+          padding: 20px;
+        }
+      </style>
+    </head>
+    <body>
+      <div>
+        <h2>📬 New Message from Your Portfolio</h2>
+        <p><span>Email:</span> ${email}</p>
+        <p>Message:</p>
+        <p>${message}</p>
+      </div>
+    </body>
+  </html>`;
 
   const info = await transporter.sendMail({
     from: process.env.USER_EMAIL,
-    to: process.env.USER_EMAIL, // You receive the email
-    replyTo: email, // Reply goes to the user's email
-    subject: `Portfolio Contact: ${name}`,
-    html: msg, 
+    to: process.env.USER_EMAIL,
+    replyTo: email,
+    subject: `From ${name}`,
+    html: msg,
   });
 
   console.log("Message sent " + info.messageId);
 }
 
-// sends mail
+// send mail
 app.post("/submit", async (req, res) => {
   const { name, email, message } = req.body;
 
   try {
     await mail(name, email, message);
     res.status(200).json({ success: true, message: "Email sent!" });
-  } 
-  catch (e) {
+  } catch (e) {
     console.error(e);
     res.status(500).json({ success: false, message: "Failed to send email." });
   }
-});
-
-// waits for a response
-app.listen(process.env.PORT || 3000, () => {
-  console.log("live at http://localhost:3000");
 });
