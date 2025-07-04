@@ -378,8 +378,8 @@ button:hover {
 
 .toast {
   position: fixed;
-  bottom: 2vh;
-  right: 2vw;
+  bottom: 1%;
+  right: .5%;
   background: var(--bg-light);
   color: var(--white);
   padding: 0.8em;
