@@ -8,6 +8,8 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
+
+// reads html and sends a live server
 app.get("/", (req, res) => {
   fs.readFile("./public/index.html", "utf8", (err, html) => {
     if (err) {
@@ -18,8 +20,10 @@ app.get("/", (req, res) => {
   });
 });
 
+// set up mail package
 async function mail(name, email, message) {
   const transporter = nodeMailer.createTransport({
+    service: "Gmail",
     host: "smtp.gmail.com",
     port: 465,
     secure: true,
@@ -36,14 +40,16 @@ async function mail(name, email, message) {
 
   const info = await transporter.sendMail({
     from: process.env.USER_EMAIL,
-    replyTo: email,
-    subject: `From ${name}`,
+    to: process.env.USER_EMAIL, // You receive the email
+    replyTo: email, // Reply goes to the user's email
+    subject: `Portfolio Contact: ${name}`,
     html: msg, 
   });
 
   console.log("Message sent " + info.messageId);
 }
 
+// sends mail
 app.post("/submit", async (req, res) => {
   const { name, email, message } = req.body;
 
@@ -57,6 +63,7 @@ app.post("/submit", async (req, res) => {
   }
 });
 
+// waits for a response
 app.listen(process.env.PORT || 3000, () => {
   console.log("live at http://localhost:3000");
 });
