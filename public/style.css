@@ -202,11 +202,12 @@ span {
   position: absolute;
   bottom: 5%;
   border-radius: 0.2em;
-  border: 1px solid var(--grey);
+  border: 2px solid var(--grey);
   background-color: transparent;
 }
 .view-btn:hover {
   background-color: var(--bg-dark);
+  border: 2px solid var(--white);
   transform: ease-in-out (0.8em);
 }
 
