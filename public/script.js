@@ -4,14 +4,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const menuIcon = document.getElementById("menu-icon");
   const navLinks = document.querySelector(".nav-group");
-  const links = navLinks.querySelectorAll("a");
+  const listItems = navLinks.querySelectorAll("li");
 
   menuIcon.addEventListener("click", () => {
     navLinks.classList.toggle("active");
   });
 
-  links.forEach((link) => {
-    link.addEventListener("click", () => {
+  listItems.forEach((li) => {
+    li.addEventListener("click", () => {
+      const link = li.querySelector("a");
+      if (link) {
+        link.click();
+      }
       if (navLinks.classList.contains("active")) {
         navLinks.classList.remove("active");
       }
