@@ -39,7 +39,7 @@ a:hover {
   cursor: pointer;
 }
 
-/* ===== HEADER & NAV ===== */
+/* HEADER & NAV */
 nav {
   display: flex;
   position: relative;
@@ -92,7 +92,6 @@ nav a:hover::after {
   cursor: pointer;
 }
 
-/* ===== HOME SECTION ===== */
 #home {
   height: 100vh;
   margin: 0 2em;
@@ -148,7 +147,7 @@ h4 {
   }
 }
 
-/* ===== ABOUT SECTION ===== */
+/* ABOUT SECTION */
 #about {
   padding: 12vh 16vw;
 }
@@ -162,7 +161,7 @@ h4 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* ===== PROJECTS SECTION ===== */
+/* PROJECTS SECTION */
 #projects {
   padding: 12vh 16vw;
 }
@@ -211,7 +210,7 @@ span {
   transform: ease-in-out (0.8em);
 }
 
-/* ===== EDUCATION SECTION ===== */
+/* EDUCATION SECTION */
 #education {
   padding: 12vh 16vw;
 }
@@ -225,7 +224,7 @@ span {
   margin-left: 1vw;
 }
 
-/* ===== CONTACTS SECTION ===== */
+/* CONTACTS SECTION */
 #contacts {
   padding: 16vh 16vw;
 }
@@ -267,7 +266,7 @@ input,
   transform: scale(1.02) !important;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 #copywrite {
   font-size: 0.875rem;
   padding: 1em;
@@ -279,7 +278,7 @@ input,
   color: var(--white);
 }
 
-/* ===== UTILITY CLASSES ===== */
+/* UTILITY CLASSES */
 .column {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -326,6 +325,10 @@ input,
 }
 .spacer-8x {
   margin-bottom: 8rem;
+}
+
+#contact-me-btn:hover {
+  background-color: var(--bg-gradient);
 }
 
 button {
