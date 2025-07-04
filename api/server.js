@@ -38,7 +38,7 @@ async function mail(name, email, message) {
     from: process.env.USER_EMAIL,
     replyTo: email,
     subject: `From ${name}`,
-    html: msg,
+    html: msg, 
   });
 
   console.log("Message sent " + info.messageId);
@@ -50,7 +50,8 @@ app.post("/submit", async (req, res) => {
   try {
     await mail(name, email, message);
     res.status(200).json({ success: true, message: "Email sent!" });
-  } catch (e) {
+  } 
+  catch (e) {
     console.error(e);
     res.status(500).json({ success: false, message: "Failed to send email." });
   }

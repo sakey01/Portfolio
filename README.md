@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-Welcome to my personal portfolio. This site showcases my background, education, projects, and skills. It's designed to give a clear overview of who I am and what I can do.
+Welcome to my personal portfolio. This site showcases my background, education, projects, and skills. It's designed to give an overview of who I am and what I can do.
 
 ---
 
@@ -18,13 +18,13 @@ Welcome to my personal portfolio. This site showcases my background, education, 
 
 - HTML  
 - CSS  
-- JavaScript (Vanilla)
+- JavaScript
 
 ---
 
 ## How to View
 
-Visit the live site here: [https://sakey01.github.io/portfolio](https://sheikh-ahmed.vercel.app/)
+Visit the live site here: https://sheikh-portfolio.vercel.app
 
 ---
 

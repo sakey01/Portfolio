@@ -88,8 +88,8 @@ toast.className = "toast";
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const formData = new FormData(form); // FormData reads the form fields
-  const data = Object.fromEntries(formData); // Turns it into a normal object
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData);
 
   // Send the data to your Express server using fetch
   fetch("/submit", {
