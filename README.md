@@ -9,7 +9,7 @@ Welcome to my personal portfolio. This site showcases my background, education, 
 - About Me section  
 - Education background  
 - Project highlights with brief descriptions  
-- Contact information and links  
+- Contact information
 - Responsive design
 
 ---
