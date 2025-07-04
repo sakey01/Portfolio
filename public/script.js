@@ -81,25 +81,30 @@ function typeWriter(quote) {
 
 // Form handling
 const form = document.getElementById("form");
-const inputs = document.querySelectorAll(".form-input");
-
 const toast = document.createElement("div");
 toast.innerText = "Message sent";
-toast.classList = "toast";
+toast.className = "toast";
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  inputs.forEach((input) => {
-    input.value = "";
-  });
+  const formData = new FormData(form); // FormData reads the form fields
+  const data = Object.fromEntries(formData); // Turns it into a normal object
 
-  document.body.appendChild(toast);
+  // Send the data to your Express server using fetch
+  fetch("/submit", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  })
+    .then((res) => res.text())
+    .then(() => {
+      form.reset();
 
-  setTimeout(() => {
-    toast.classList.add("fade-out");
-    setTimeout(() => {
-      toast.remove();
-    }, 1200);
-  }, 3000);
+      document.body.appendChild(toast);
+      setTimeout(() => {
+        toast.classList.add("fade-out");
+        setTimeout(() => toast.remove(), 1200);
+      }, 3000);
+    });
 });
