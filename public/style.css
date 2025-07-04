@@ -328,7 +328,7 @@ input,
 }
 
 #contact-me-btn:hover {
-  background-color: var(--bg-gradient);
+  background-color: var(--bg-light);
 }
 
 button {
