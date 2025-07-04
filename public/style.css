@@ -64,7 +64,7 @@ nav a:after {
   left: 0;
   width: 0%;
   height: 2px;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 nav a:hover::after {
@@ -129,7 +129,7 @@ h4 {
 }
 
 .quotes {
-  margin: 4em 0 6em 0;
+  margin: 12vh 0 8vh 0;
 }
 
 #scroll-button {
@@ -150,7 +150,7 @@ h4 {
 
 /* ===== ABOUT SECTION ===== */
 #about {
-  padding: 16vh 20vw;
+  padding: 12vh 16vw;
 }
 
 .translucent-bg {
@@ -164,7 +164,7 @@ h4 {
 
 /* ===== PROJECTS SECTION ===== */
 #projects {
-  padding: 16vh 4vw;
+  padding: 12vh 16vw;
 }
 
 .project-card {
@@ -173,7 +173,7 @@ h4 {
   border-radius: 0.5rem;
   overflow: hidden;
   max-width: 400px;
-  height: 70vh;
+  height: 60vh;
   min-height: 30em;
   flex-direction: column;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -181,7 +181,7 @@ h4 {
 
 .project-card img {
   width: 100%;
-  height: 25%;
+  height: 20%;
   display: block;
   transition: transform 0.15s ease-in-out;
 }
@@ -191,6 +191,7 @@ h4 {
 }
 
 span {
+  font-size: 1em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -201,9 +202,7 @@ span {
   position: absolute;
   bottom: 5%;
   border-radius: 0.2em;
-  font-size: 1rem;
-  border: 1px solid var(--white);
-  color: var(--white);
+  border: 1px solid var(--grey);
   background-color: transparent;
 }
 .view-btn:hover {
@@ -213,7 +212,7 @@ span {
 
 /* ===== EDUCATION SECTION ===== */
 #education {
-  padding: 16vh 20vw;
+  padding: 12vh 16vw;
 }
 
 #school-icon,
@@ -221,13 +220,13 @@ span {
   font-size: 1.8rem;
 }
 
-.left-margin {
-  margin-left: 0.5rem;
+.module-block {
+  margin-left: 1vw;
 }
 
 /* ===== CONTACTS SECTION ===== */
 #contacts {
-  padding: 16vh 20vw;
+  padding: 16vh 16vw;
 }
 
 .icons-list {
@@ -377,6 +376,23 @@ button:hover {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
 }
 
+.toast {
+  position: fixed;
+  bottom: 2vh;
+  right: 2vw;
+  background: var(--white);
+  color: var(--bg-dark);
+  padding: 0.8em;
+  border-radius: 0.1em;
+  z-index: 10;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.toast.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
 @media (max-width: 768px) {
   nav {
     display: flex;
@@ -426,10 +442,6 @@ button:hover {
     flex-direction: column;
   }
 
-  .quotes {
-    margin: 2em;
-  }
-
   #home {
     padding: 2em 0;
   }
@@ -437,7 +449,7 @@ button:hover {
   #about,
   #education,
   #contacts {
-    padding: 8rem 2rem;
+    padding: 12vh 4vw;
   }
 
   .module-block,

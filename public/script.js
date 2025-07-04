@@ -41,10 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const sectionTop = section.offsetTop - 300;
       const sectionId = section.getAttribute("id");
 
-      if (
-        scrollY >= sectionTop &&
-        scrollY < sectionTop + sectionHeight
-      ) {
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
         navLinksAll.forEach((link) => {
           link.classList.remove("active-underline");
           if (link.getAttribute("href") === `#${sectionId}`) {
@@ -81,3 +78,28 @@ function typeWriter(quote) {
   }
   return;
 }
+
+// Form handling
+const form = document.getElementById("form");
+const inputs = document.querySelectorAll(".form-input");
+
+const toast = document.createElement("div");
+toast.innerText = "Message sent";
+toast.classList = "toast";
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  inputs.forEach((input) => {
+    input.value = "";
+  });
+
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.add("fade-out");
+    setTimeout(() => {
+      toast.remove();
+    }, 1200);
+  }, 3000);
+});
