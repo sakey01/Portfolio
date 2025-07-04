@@ -1,28 +1,4 @@
-const express = require("express");
-const fs = require("fs");
-const app = express();
 const nodeMailer = require("nodemailer");
-require("dotenv").config();
-
-app.use(express.json());
-app.use(express.static("public"));
-app.use(express.urlencoded({ extended: true }));
-
-// Health check endpoint
-app.get("/health", (req, res) => {
-  res.status(200).json({ status: "OK", timestamp: new Date().toISOString() });
-});
-
-// reads html and sends a live server
-app.get("/", (req, res) => {
-  fs.readFile("./public/index.html", "utf8", (err, html) => {
-    if (err) {
-      res.status(500).send("Not working :/");
-      return;
-    }
-    res.send(html);
-  });
-});
 
 // set up mail package
 async function mail(name, email, message) {
@@ -49,8 +25,9 @@ async function mail(name, email, message) {
     <body>
       <div>
         <h2>📬 New Message from Your Portfolio</h2>
-        <p><span>Email:</span> ${email}</p>
-        <p>Message:</p>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong></p>
         <p>${message}</p>
       </div>
     </body>
@@ -60,15 +37,20 @@ async function mail(name, email, message) {
     from: process.env.USER_EMAIL,
     to: process.env.USER_EMAIL,
     replyTo: email,
-    subject: `From ${name}`,
+    subject: `Portfolio Contact: ${name}`,
     html: msg,
   });
 
   console.log("Message sent " + info.messageId);
 }
 
-// send mail
-app.post("/submit", async (req, res) => {
+// Vercel serverless function
+export default async function handler(req, res) {
+  // Only allow POST requests
+  if (req.method !== 'POST') {
+    return res.status(405).json({ success: false, message: 'Method not allowed' });
+  }
+
   const { name, email, message } = req.body;
 
   // Log the request for debugging
@@ -88,10 +70,4 @@ app.post("/submit", async (req, res) => {
     console.error("Email sending failed:", e.message);
     res.status(500).json({ success: false, message: "Failed to send email." });
   }
-});
-
-// waits for a response
-app.listen(process.env.PORT || 3000, () => {
-  console.log(`Server running on port ${process.env.PORT || 3000}`);
-  console.log(`Health check: http://localhost:${process.env.PORT || 3000}/health`);
-});
+} 

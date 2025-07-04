@@ -96,7 +96,7 @@ form.addEventListener("submit", (e) => {
   const data = Object.fromEntries(formData);
 
   // Send the data to your Express server using fetch
-  fetch("/submit", {
+  fetch("/api/submit", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
