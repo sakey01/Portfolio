@@ -74,3 +74,8 @@ app.post("/submit", async (req, res) => {
     res.status(500).json({ success: false, message: "Failed to send email." });
   }
 });
+
+// waits for a response
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Server running");
+});
