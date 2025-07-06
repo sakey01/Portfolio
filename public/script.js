@@ -1,7 +1,12 @@
 // Toggle mobile menu
 document.addEventListener("DOMContentLoaded", () => {
   typeWriter();
+  initializeMobileMenu();
+  initializeScrollNavigation();
+});
 
+// Mobile menu functionality
+function initializeMobileMenu() {
   const menuIcon = document.getElementById("menu-icon");
   const navLinks = document.querySelector(".nav-group");
   const listItems = navLinks.querySelectorAll("li");
@@ -31,8 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
       navLinks.classList.remove("active");
     }
   });
+}
 
-  // Underline nav link on scroll
+// Underline nav link on scroll
+function initializeScrollNavigation() {
   const sections = document.querySelectorAll("section[id]");
   const navLinksAll = document.querySelectorAll(".nav-group a");
   navLinksAll[0].classList.add("active-underline");
@@ -56,9 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   window.addEventListener("scroll", activateNavLink);
-});
+}
 
-// animation effect for view
+// Animation effect for view
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -68,19 +75,19 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 });
+
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((e) => observer.observe(e));
 
 // Typing quote effect for the home page
 let i = 0;
-function typeWriter(quote) {
-  quote = '"The best error message is the one that never shows up. — Thomas Fuchs"';
+function typeWriter() {
+  const quote = '"The best error message is the one that never shows up. — Thomas Fuchs"';
   if (i < quote.length) {
     document.querySelector("#quote").innerHTML += quote.charAt(i);
     i++;
     setTimeout(typeWriter, 30);
   }
-  return;
 }
 
 // Form handling
@@ -106,9 +113,12 @@ form.addEventListener("submit", (e) => {
       form.reset();
 
       document.body.appendChild(toast);
+      // Trigger the slide-in animation
+      setTimeout(() => toast.classList.add("show"), 10);
+      
       setTimeout(() => {
         toast.classList.add("fade-out");
-        setTimeout(() => toast.remove(), 1200);
+        setTimeout(() => toast.remove(), 400);
       }, 3000);
     });
 });
