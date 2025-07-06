@@ -173,6 +173,7 @@ h4 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
+  min-height: 490px;
 }
 
 .project-card figure {
@@ -505,8 +506,12 @@ button:hover {
     padding: 2em 0;
   }
 
+  #projects {
+    margin: 0 8vw;
+    gap: 2vh
+  }
+
   #about,
-  #projects,
   #education,
   #contacts {
     padding: 5vh 5vw;
