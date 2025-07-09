@@ -38,4 +38,4 @@ Visit the live site here: https://sheikh-portfolio.vercel.app
 
 ## Screenshots
 
-![Home page](image.png)
+![image](https://github.com/user-attachments/assets/11c08a8d-e69e-428e-9757-7e011cef9415)
