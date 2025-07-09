@@ -130,11 +130,25 @@ h4 {
   margin: 12vh 0 8vh 0;
 }
 
+.blink::after {
+  content: "|";
+  animation: blink 0.7s alternate infinite;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 #scroll-button {
   position: relative;
   top: 20vh;
   background: transparent;
-  animation: bounce 1s alternate-reverse linear infinite;
+  animation: bounce 1s alternate-reverse infinite;
 }
 
 @keyframes bounce {
@@ -219,6 +233,7 @@ span {
   justify-content: center;
   align-items: flex-start;
   width: fit-content;
+  padding-left: 1rem;
 }
 
 .view-btn:hover {
@@ -508,7 +523,7 @@ button:hover {
 
   #projects {
     margin: 0 8vw;
-    gap: 2vh
+    gap: 2vh;
   }
 
   #about,

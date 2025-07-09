@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   typeWriter();
   initializeMobileMenu();
-  initializeScrollNavigation();
+  initScrollNav();
 });
 
 // Mobile menu functionality
@@ -39,7 +39,7 @@ function initializeMobileMenu() {
 }
 
 // Underline nav link on scroll
-function initializeScrollNavigation() {
+function initScrollNav() {
   const sections = document.querySelectorAll("section[id]");
   const navLinksAll = document.querySelectorAll(".nav-group a");
   navLinksAll[0].classList.add("active-underline");
@@ -49,7 +49,7 @@ function initializeScrollNavigation() {
 
     sections.forEach((section) => {
       const sectionHeight = section.offsetHeight;
-      const sectionTop = section.offsetTop - 300;
+      const sectionTop = section.offsetTop - 280;
       const sectionId = section.getAttribute("id");
 
       if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
@@ -65,7 +65,7 @@ function initializeScrollNavigation() {
   window.addEventListener("scroll", activateNavLink);
 }
 
-// Animation effect for view
+// Animation effect on scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -79,14 +79,17 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((e) => observer.observe(e));
 
-// Typing quote effect for the home page
+// Typing quote effect + cursor blink effect
 let i = 0;
 function typeWriter() {
-  const quote = '"The best error message is the one that never shows up. — Thomas Fuchs"';
-  if (i < quote.length) {
-    document.querySelector("#quote").innerHTML += quote.charAt(i);
+  const quote = document.getElementById("quote");
+  const message = "The best error message is the one that never shows up. — Thomas Fuchs";
+  quote.classList.add('blink');
+
+  if (i < message.length) {
+    quote.innerHTML += message.charAt(i);
     i++;
-    setTimeout(typeWriter, 30);
+    setTimeout(typeWriter, 40);
   }
 }
 
@@ -115,7 +118,7 @@ form.addEventListener("submit", (e) => {
       document.body.appendChild(toast);
       // Trigger the slide-in animation
       setTimeout(() => toast.classList.add("show"), 10);
-      
+
       setTimeout(() => {
         toast.classList.add("fade-out");
         setTimeout(() => toast.remove(), 400);

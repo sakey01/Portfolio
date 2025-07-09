@@ -34,3 +34,8 @@ Visit the live site here: https://sheikh-portfolio.vercel.app
 
 - Fully compatible with modern browsers  
 - No backend or external frameworks required
+
+
+## Screenshots
+
+![Home page](image.png)
